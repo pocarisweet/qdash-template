@@ -17,6 +17,7 @@ execute:
 
 ```{python}
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import itables 
 from plotnine import ggplot, aes, geom_boxplot, scale_fill_manual, theme, element_blank, element_text, labs, facet_wrap, scale_x_continuous
