@@ -106,7 +106,7 @@ fivenodes_fig['method'] = pd.Categorical(fivenodes_fig['method'], categories=['S
 
 fill_colors = ["steelblue", "pink"]
 
-fivenodes_fig2 = (ggplot(fivenodes, aes(x='mrate', y='log10(mse)', group='interaction(mrate, method)')) +
+fivenodes_fig2 = (ggplot(fivenodes_fig, aes(x='mrate', y='log10(mse)', group='interaction(mrate, method)')) +
       geom_boxplot(aes(fill='method'), color='black', width=0.7, outlier_color='black', outlier_shape=2) +
       scale_fill_manual(values=fill_colors, labels=['Classic', 'Proposed']) +
       theme(strip_background=element_blank(), panel_grid=element_blank(),
