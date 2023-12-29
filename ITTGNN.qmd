@@ -59,7 +59,7 @@ pedal_wiki_GSO_EvolveGCNH['model']='EvolveGCNH'
 wiki_GSO_GNAR = pd.read_csv('./Data/Final_Simulation_GNAR_wiki_GSO.csv')
 wiki_GSO_GNAR['model']='GNAR'
 
-df = pd.read_csv('./df_fig.csv')
+df = pd.read_csv('./Data/df_fig.csv')
 
 df2 = pd.concat([pedal_wiki_GSO_GConvGRU,pedal_wiki_GSO_GConvLSTM,pedal_wiki_GSO_GCLSTM,pedal_wiki_GSO_DCRNN,pedal_wiki_GSO_LRGCN,pedal_wiki_GSO_TGCN,pedal_wiki_GSO_EvolveGCNO,pedal_wiki_GSO_DYGRENCODER,pedal_wiki_GSO_EvolveGCNH,wiki_GSO_GNAR])
 
