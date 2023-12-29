@@ -18,6 +18,7 @@ execute:
 ```{python}
 import pandas as pd
 import matplotlib.pyplot as plt
+import itables 
 
 # GConvGRU
 pedal_wiki_GSO_GConvGRU = pd.read_csv('./Data/Final_Simulation_GConvGRU_pedal_wiki_GSO.csv')

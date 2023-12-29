@@ -24,7 +24,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -74,6 +74,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -117,8 +120,75 @@ grid-auto-rows: minmax(0, 1fr);">
 <ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-1"><li class="nav-item" role="presentation"><a href="#card-tabset-1-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Fivenodes" aria-selected="true" class="nav-link active">Fivenodes</a></li></ul></div>
 
 <div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-1"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-1"><div class="card-body html-fill-item html-fill-container" data-title="Fivenodes">
-<div class="cell-output cell-output-error html-fill-item html-fill-container">
-<pre><code>NameError: name 'itables' is not defined</code></pre>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<style>.itables table td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables table th {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables thead input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.itables tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+</style>
+<div class="itables html-fill-item html-fill-container">
+
+<table id="0ac371ad-fd29-49ca-bc3f-17e13434d0ab" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">mrate</th>
+<th data-quarto-table-cell-role="th">nof_filters</th>
+<th data-quarto-table-cell-role="th">inter_method</th>
+<th data-quarto-table-cell-role="th">method</th>
+<th data-quarto-table-cell-role="th">lags</th>
+<th data-quarto-table-cell-role="th">epoch</th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">std</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="module">
+
+    // Define the table data
+    const data = [[12, "DCRNN", 0.7, 2.0, "linear", "IT-STGCN", 2, 50.0, 1.247, 0.044], [13, "DCRNN", 0.7, 2.0, "linear", "STGCN", 2, 50.0, 1.271, 0.066], [32, "DyGrEncoder", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.252, 0.06], [33, "DyGrEncoder", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.548, 0.158], [52, "EvolveGCNH", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.188, 0.049], [53, "EvolveGCNH", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.228, 0.064], [72, "EvolveGCNO", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.162, 0.052], [73, "EvolveGCNO", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.198, 0.045], [92, "GCLSTM", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.228, 0.034], [93, "GCLSTM", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.245, 0.033], [112, "GConvGRU", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.18, 0.06], [113, "GConvGRU", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.858, 0.139], [132, "GConvLSTM", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.287, 0.075], [133, "GConvLSTM", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.472, 0.125], [152, "LRGCN", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.244, 0.041], [153, "LRGCN", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.261, 0.047], [172, "TGCN", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.11, 0.037], [173, "TGCN", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.184, 0.057]];
+
+    // Define the dt_args
+    let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
+    dt_args["data"] = data;
+
+    let table = new DataTable('#0ac371ad-fd29-49ca-bc3f-17e13434d0ab', dt_args);
+</script>
+</div>
 </div>
 </div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
