@@ -107,6 +107,7 @@ fivenodes_fig['method'] = pd.Categorical(fivenodes_fig['method'], categories=['S
 
 fill_colors = ["steelblue", "pink"]
 fivenodes_fig['log_mse'] = np.log10(fivenodes_fig['mse'])
+fivenodes_fig['mrate_method_interaction'] = factor(fivenodes_fig['mrate'].astype(str) + '_' + fivenodes_fig['method'].astype(str))
 
 fivenodes_fig2 = (ggplot(fivenodes_fig, aes(x='mrate', y='log_mse', group='interaction(mrate, method)')) +
       geom_boxplot(aes(fill='method'), color='black', width=0.7, outlier_color='black', outlier_shape=2) +
