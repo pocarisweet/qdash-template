@@ -104,7 +104,7 @@ model_order = ["GConvGRU", "GConvLSTM", "GCLSTM", "LRGCN", "DyGrEncoder", "Evolv
 fivenodes_fig['model'] = pd.Categorical(fivenodes_fig['model'], categories=model_order, ordered=True)
 fivenodes_fig['method'] = pd.Categorical(fivenodes_fig['method'], categories=['STGCN', 'IT-STGCN'], ordered=True)
 
-fivenodes_fig2 (ggplot(fivenodes_fig, aes(x='mrate', y='log10(mse)', group='interaction(mrate, method)')) +
+fivenodes_fig2 = (ggplot(fivenodes_fig, aes(x='mrate', y='log10(mse)', group='interaction(mrate, method)')) +
       geom_boxplot(aes(fill='method'), color='black', width=0.7, outlier_color='black', outlier_shape=2) +
       scale_fill_manual(values=fill_colors, labels=['Classic', 'Proposed']) +
       theme(strip_background=element_blank(), strip_placement="outside", panel_grid=element_blank(),
