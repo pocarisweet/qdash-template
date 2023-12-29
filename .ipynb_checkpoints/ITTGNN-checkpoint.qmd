@@ -19,6 +19,7 @@ execute:
 import pandas as pd
 import matplotlib.pyplot as plt
 import itables 
+from plotnine import ggplot, aes, geom_boxplot, scale_fill_manual, theme, element_blank, element_text, labs, facet_wrap, scale_x_continuous
 
 # GConvGRU
 pedal_wiki_GSO_GConvGRU = pd.read_csv('./Data/Final_Simulation_GConvGRU_pedal_wiki_GSO.csv')
@@ -97,10 +98,24 @@ model_conditions = [
     'GConvGRU', 'GConvLSTM', 'GCLSTM', 'LRGCN', 'DyGrEncoder', 'EvolveGCNH', 'EvolveGCNO', 'TGCN', 'DCRNN'
 ]
 
-fivenodes = df[filter_condition & df['model'].isin(model_conditions)]
+fivenodes_fig = df[filter_condition & df['model'].isin(model_conditions)]
 
 model_order = ["GConvGRU", "GConvLSTM", "GCLSTM", "LRGCN", "DyGrEncoder", "EvolveGCNH", "EvolveGCNO", "TGCN", "DCRNN"]
-fivenodes['model'] = pd.Categorical(fivenodes['model'], categories=model_order, ordered=True)
-fivenodes['method'] = pd.Categorical(fivenodes['method'], categories=['STGCN', 'IT-STGCN'], ordered=True)
+fivenodes_fig['model'] = pd.Categorical(fivenodes_fig['model'], categories=model_order, ordered=True)
+fivenodes_fig['method'] = pd.Categorical(fivenodes_fig['method'], categories=['STGCN', 'IT-STGCN'], ordered=True)
+
+fivenodes_fig2 (ggplot(fivenodes_fig, aes(x='mrate', y='log10(mse)', group='interaction(mrate, method)')) +
+      geom_boxplot(aes(fill='method'), color='black', width=0.7, outlier_color='black', outlier_shape=2) +
+      scale_fill_manual(values=fill_colors, labels=['Classic', 'Proposed']) +
+      theme(strip_background=element_blank(), strip_placement="outside", panel_grid=element_blank(),
+            legend_position='bottom', axis_text_x=element_text(angle=0, hjust=0.5, vjust=0.5)) +
+      labs(x="Missing Rate", y="MSE(log scale)", fill="") +
+      scale_x_continuous(labels=['', '', '', '', '']) +
+      facet_wrap('~model', ncol=3, scales="free_y"))
+
+fill_colors = ["steelblue", "pink"]
+
+fivenodes_fig2.draw()
+plt.show()
 
 ```
