@@ -104,6 +104,8 @@ model_order = ["GConvGRU", "GConvLSTM", "GCLSTM", "LRGCN", "DyGrEncoder", "Evolv
 fivenodes_fig['model'] = pd.Categorical(fivenodes_fig['model'], categories=model_order, ordered=True)
 fivenodes_fig['method'] = pd.Categorical(fivenodes_fig['method'], categories=['STGCN', 'IT-STGCN'], ordered=True)
 
+fill_colors = ["steelblue", "pink"]
+
 fivenodes_fig2 = (ggplot(fivenodes_fig, aes(x='mrate', y='log10(mse)', group='interaction(mrate, method)')) +
       geom_boxplot(aes(fill='method'), color='black', width=0.7, outlier_color='black', outlier_shape=2) +
       scale_fill_manual(values=fill_colors, labels=['Classic', 'Proposed']) +
@@ -112,8 +114,6 @@ fivenodes_fig2 = (ggplot(fivenodes_fig, aes(x='mrate', y='log10(mse)', group='in
       labs(x="Missing Rate", y="MSE(log scale)", fill="") +
       scale_x_continuous(labels=['', '', '', '', '']) +
       facet_wrap('~model', ncol=3, scales="free_y"))
-
-fill_colors = ["steelblue", "pink"]
 
 fivenodes_fig2.draw()
 plt.show()
