@@ -110,19 +110,13 @@ itables.show(FiveVTS_block)
 
 ## Column {width=50%}
 
-### Row {.tabset}
-
 ```{python}
 #| title: Random Missing Figure
 
+with open('fivenodes_fig.pkl', 'rb') as file:
+    fivenodes_fig = pickle.load(file)
 
-
-```
-
-### Row {.tabset}
-
-```{python}
-#| title: Block Missing Figure
+fivenodes_fig
 
 ```
 
@@ -171,17 +165,14 @@ itables.show(Chickenpox_block)
 
 ## Column {width=50%}
 
-### Row {.tabset}
-
 ```{python}
 #| title: Random Missing Figure
 
-```
+with open('chickenpox_fig.pkl', 'rb') as file:
+    chickenpox_fig = pickle.load(file)
 
-### Row {.tabset}
+chickenpox_fig
 
-```{python}
-#| title: Block Missing Figure
 ```
 
 
@@ -228,17 +219,15 @@ itables.show(Pedalme_block)
 
 ## Column {width=50%}
 
-### Row {.tabset}
 
 ```{python}
 #| title: Random Missing Figure
-```
 
+with open('pedalme_fig.pkl', 'rb') as file:
+    pedalme_fig = pickle.load(file)
 
-### Row {.tabset}
+pedalme_fig
 
-```{python}
-#| title: Block Missing Figure
 ```
 
 
@@ -283,15 +272,14 @@ itables.show(Wikimath_block)
 
 ## Column {width=50%}
 
-### Row {.tabset}
-
 ```{python}
 #| title: Random Missing Figure
-```
 
+with open('wikimath_fig.pkl', 'rb') as file:
+    wikimath_fig = pickle.load(file)
 
-```{python}
-#| title: Block Missing Figure
+wikimath_fig
+
 ```
 
 
@@ -336,16 +324,15 @@ itables.show(Windmillsmall_block)
 
 ## Column {width=50%}
 
-### Row {.tabset}
 
 ```{python}
 #| title: Random Missing Figure
 
-```
+with open('windmillsmall_fig.pkl', 'rb') as file:
+    windmillsmall_fig = pickle.load(file)
 
+windmillsmall_fig
 
-```{python}
-#| title: Block Missing Figure
 
 ```
 
@@ -391,16 +378,14 @@ itables.show(MontevideoBus_block)
 
 ## Column {width=50%}
 
-### Row {.tabset}
-
 ```{python}
 #| title: Random Missing Figure
 
-```
+with open('monte_fig.pkl', 'rb') as file:
+    monte_fig = pickle.load(file)
 
+monte_fig
 
-```{python}
-#| title: Block Missing Figure
 
 ```
 
