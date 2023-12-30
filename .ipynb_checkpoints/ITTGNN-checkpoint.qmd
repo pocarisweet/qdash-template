@@ -159,6 +159,7 @@ itables.show(Chickenpox_random)
 ### Row {.tabset}
 
 ```{python}
+#| title: Block Missing Data
 
 Chickenpox_block = pd.merge(df.query("dataset=='chickenpox' and mtype=='block'").groupby(['model','inter_method','mrate','nof_filters','method'])['mse'].mean().reset_index(),
          df.query("dataset=='chickenpox' and mtype=='block'").groupby(['model','inter_method','mrate','nof_filters','method'])['mse'].std().reset_index(),
