@@ -302,8 +302,6 @@ Windmillsmall_random = pd.merge(df.query("dataset=='windmillsmall' and mtype=='r
 itables.show(Windmillsmall_random)
 ```
 
-### Row {.tabset}
-
 ```{python}
 #| title: Block Missing Data
 
@@ -355,7 +353,6 @@ MontevideoBus_random = pd.merge(df.query("dataset=='monte' and mtype=='rand'").g
 itables.show(MontevideoBus_random)
 ```
 
-### Row {.tabset}
 
 ```{python}
 
