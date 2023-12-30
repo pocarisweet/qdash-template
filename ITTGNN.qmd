@@ -362,7 +362,7 @@ MontevideoBus_baseline = pd.merge(df.query("dataset=='monte' and mrate==0").grou
          df.query("dataset=='monte' and mrate==0").groupby(['model','lags'])['mse'].std().reset_index(),
          on=['model','lags']).rename(columns={'mse_x':'mean','mse_y':'std'})
 
-itables.show()         
+itables.show(MontevideoBus_baseline)         
 ```
 
 ```{python}
