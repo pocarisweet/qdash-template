@@ -75,19 +75,42 @@ df2 = pd.concat([pedal_wiki_GSO_GConvGRU,pedal_wiki_GSO_GConvLSTM,pedal_wiki_GSO
 ### Row {.tabset}
 
 ```{python}
-#| title: Fivenodes
+#| title: Random Missing Data
 
-itables.show(pd.merge(df.query("dataset=='fivenodes' and mtype=='rand'").groupby(['model','mrate','nof_filters','inter_method','method','lags','epoch'])['mse'].mean().reset_index(),
+FiveVTS_random = pd.merge(df.query("dataset=='fivenodes' and mtype=='rand'").groupby(['model','mrate','nof_filters','inter_method','method','lags','epoch'])['mse'].mean().reset_index(),
          df.query("dataset=='fivenodes' and mtype=='rand'").groupby(['model','mrate','nof_filters','inter_method','method','lags','epoch'])['mse'].std().reset_index(),
-         on=['model','inter_method','method','nof_filters','mrate','lags','epoch']).rename(columns={'mse_x':'mean','mse_y':'std'}).round(3).query("mrate==0.7 and inter_method=='linear'"))
+         on=['model','inter_method','method','nof_filters','mrate','lags','epoch']).rename(columns={'mse_x':'mean','mse_y':'std'}).round(3).query("mrate==0.7 and inter_method=='linear'")
+itables.show(FiveVTS_random)
 ```
 
 ### Row {.tabset}
 
 ```{python}
+#| title: Block Missing Data
 
+FiveVTS_block = pd.merge(df.query("dataset=='fivenodes' and mtype=='block'").groupby(['model','mrate','nof_filters','inter_method','method','epoch'])['mse'].mean().reset_index(),
+         df.query("dataset=='fivenodes' and mtype=='block'").groupby(['model','mrate','nof_filters','inter_method','method','epoch'])['mse'].std().reset_index(),
+         on=['model','inter_method','method','nof_filters','mrate','epoch']).rename(columns={'mse_x':'mean','mse_y':'std'}).round(3).query("inter_method=='linear'")
+itables.show(FiveVTS_block)
 
 ```
+
+## Column {width=50%}
+
+### Row {.tabset}
+
+```{python}
+#| title: Random Missing Figure
+
+```
+
+### Row {.tabset}
+
+```{python}
+#| title: Block Missing Figure
+
+```
+
 
 
 # Chickenpox
@@ -97,7 +120,7 @@ itables.show(pd.merge(df.query("dataset=='fivenodes' and mtype=='rand'").groupby
 ### Row {.tabset}
 
 ```{python}
-#| title: Fivenodes
+#| title: Chickenpox
 
 itables.show(pd.merge(df.query("dataset=='fivenodes' and mtype=='rand'").groupby(['model','mrate','nof_filters','inter_method','method','lags','epoch'])['mse'].mean().reset_index(),
          df.query("dataset=='fivenodes' and mtype=='rand'").groupby(['model','mrate','nof_filters','inter_method','method','lags','epoch'])['mse'].std().reset_index(),
