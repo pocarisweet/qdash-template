@@ -117,9 +117,10 @@ grid-auto-rows: minmax(0, 1fr);">
 <div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-header dashboard-card-no-title bslib-navs-card-title">
 
-<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-1"><li class="nav-item" role="presentation"><a href="#card-tabset-1-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Random Missing Data" aria-selected="true" class="nav-link active">Random Missing Data</a></li></ul></div>
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-1"><li class="nav-item" role="presentation"><a href="#card-tabset-1-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Baseline Data" aria-selected="true" class="nav-link active">Baseline Data</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Random Missing Data" aria-selected="false" class="nav-link">Random Missing Data</a></li></ul></div>
 
-<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-1"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-1"><div class="card-body html-fill-item html-fill-container" data-title="Random Missing Data">
+
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-1"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-1"><div class="card-body html-fill-item html-fill-container" data-title="Baseline Data">
 <div class="cell-output cell-output-display html-fill-item html-fill-container">
 <style>.itables table td {
     text-overflow: ellipsis;
@@ -145,7 +146,72 @@ grid-auto-rows: minmax(0, 1fr);">
 </style>
 <div class="itables html-fill-item html-fill-container">
 
-<table id="55bcb733-7ec1-4556-80c3-256788863e88" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<table id="1cb5a955-e4d9-44e3-8aec-68ea56fda08d" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">nof_filters</th>
+<th data-quarto-table-cell-role="th">lags</th>
+<th data-quarto-table-cell-role="th">epoch</th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">std</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="module">
+
+    // Define the table data
+    const data = [[0, "DCRNN", 2.0, 2, 50.0, 1.228921, 0.041402], [1, "DyGrEncoder", 12.0, 2, 50.0, 1.113982, 0.037294], [2, "EvolveGCNH", 12.0, 2, 50.0, 1.174662, 0.068143], [3, "EvolveGCNO", 12.0, 2, 50.0, 1.16837, 0.064514], [4, "GCLSTM", 4.0, 2, 50.0, 1.209093, 0.023275], [5, "GConvGRU", 12.0, 2, 50.0, 0.731855, 0.005234], [6, "GConvLSTM", 12.0, 2, 50.0, 1.131455, 0.041137], [7, "LRGCN", 4.0, 2, 50.0, 1.21168, 0.023769], [8, "TGCN", 12.0, 2, 50.0, 1.084678, 0.015729]];
+
+    // Define the dt_args
+    let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
+    dt_args["data"] = data;
+
+    let table = new DataTable('#1cb5a955-e4d9-44e3-8aec-68ea56fda08d', dt_args);
+</script>
+</div>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-2"><div class="card-body html-fill-item html-fill-container" data-title="Random Missing Data">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<style>.itables table td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables table th {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables thead input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.itables tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+</style>
+<div class="itables html-fill-item html-fill-container">
+
+<table id="adad437a-eedf-4a58-854f-70a5b6916aea" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
 <thead>
 <tr class="header" style="text-align: right;">
 <th data-quarto-table-cell-role="th"></th>
@@ -180,13 +246,13 @@ grid-auto-rows: minmax(0, 1fr);">
 <script type="module">
 
     // Define the table data
-    const data = [[12, "DCRNN", 0.7, 2.0, "linear", "IT-STGCN", 2, 50.0, 1.247, 0.044], [13, "DCRNN", 0.7, 2.0, "linear", "STGCN", 2, 50.0, 1.271, 0.066], [32, "DyGrEncoder", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.252, 0.06], [33, "DyGrEncoder", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.548, 0.158], [52, "EvolveGCNH", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.188, 0.049], [53, "EvolveGCNH", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.228, 0.064], [72, "EvolveGCNO", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.162, 0.052], [73, "EvolveGCNO", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.198, 0.045], [92, "GCLSTM", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.228, 0.034], [93, "GCLSTM", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.245, 0.033], [112, "GConvGRU", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.18, 0.06], [113, "GConvGRU", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.858, 0.139], [132, "GConvLSTM", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.287, 0.075], [133, "GConvLSTM", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.472, 0.125], [152, "LRGCN", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.244, 0.041], [153, "LRGCN", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.261, 0.047], [172, "TGCN", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.11, 0.037], [173, "TGCN", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.184, 0.057]];
+    const data = [[12, "DCRNN", 0.7, 2.0, "linear", "IT-STGCN", 2, 50.0, 1.246664, 0.043812], [13, "DCRNN", 0.7, 2.0, "linear", "STGCN", 2, 50.0, 1.271471, 0.065685], [32, "DyGrEncoder", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.252342, 0.06016], [33, "DyGrEncoder", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.548123, 0.15779], [52, "EvolveGCNH", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.188208, 0.048596], [53, "EvolveGCNH", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.227743, 0.063846], [72, "EvolveGCNO", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.162145, 0.052479], [73, "EvolveGCNO", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.197802, 0.044959], [92, "GCLSTM", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.227604, 0.034115], [93, "GCLSTM", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.245393, 0.03334], [112, "GConvGRU", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.179795, 0.060019], [113, "GConvGRU", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.857779, 0.138554], [132, "GConvLSTM", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.286963, 0.075301], [133, "GConvLSTM", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.471937, 0.124516], [152, "LRGCN", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.244421, 0.040536], [153, "LRGCN", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.26074, 0.047424], [172, "TGCN", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.110276, 0.03717], [173, "TGCN", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.184332, 0.057177]];
 
     // Define the dt_args
     let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
     dt_args["data"] = data;
 
-    let table = new DataTable('#55bcb733-7ec1-4556-80c3-256788863e88', dt_args);
+    let table = new DataTable('#adad437a-eedf-4a58-854f-70a5b6916aea', dt_args);
 </script>
 </div>
 </div>
@@ -226,7 +292,7 @@ grid-auto-rows: minmax(0, 1fr);">
 </style>
 <div class="itables html-fill-item html-fill-container">
 
-<table id="c7d463f0-9983-425b-8ea0-a9576cf3c121" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<table id="50439132-69c4-4dbd-8ed9-2cb5461982f8" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
 <thead>
 <tr class="header" style="text-align: right;">
 <th data-quarto-table-cell-role="th"></th>
@@ -259,13 +325,13 @@ grid-auto-rows: minmax(0, 1fr);">
 <script type="module">
 
     // Define the table data
-    const data = [[0, "DCRNN", 0.125, 2.0, "linear", "IT-STGCN", 50.0, 1.232, 0.033], [1, "DCRNN", 0.125, 2.0, "linear", "STGCN", 50.0, 1.26, 0.051], [4, "DyGrEncoder", 0.125, 12.0, "linear", "IT-STGCN", 50.0, 1.124, 0.035], [5, "DyGrEncoder", 0.125, 12.0, "linear", "STGCN", 50.0, 1.173, 0.037], [8, "EvolveGCNH", 0.125, 12.0, "linear", "IT-STGCN", 50.0, 1.181, 0.055], [9, "EvolveGCNH", 0.125, 12.0, "linear", "STGCN", 50.0, 1.197, 0.076], [12, "EvolveGCNO", 0.125, 12.0, "linear", "IT-STGCN", 50.0, 1.162, 0.04], [13, "EvolveGCNO", 0.125, 12.0, "linear", "STGCN", 50.0, 1.176, 0.056], [16, "GCLSTM", 0.125, 4.0, "linear", "IT-STGCN", 50.0, 1.219, 0.025], [17, "GCLSTM", 0.125, 4.0, "linear", "STGCN", 50.0, 1.244, 0.033], [20, "GConvGRU", 0.125, 12.0, "linear", "IT-STGCN", 50.0, 1.165, 0.043], [21, "GConvGRU", 0.125, 12.0, "linear", "STGCN", 50.0, 1.21, 0.039], [24, "GConvLSTM", 0.125, 12.0, "linear", "IT-STGCN", 50.0, 1.14, 0.038], [25, "GConvLSTM", 0.125, 12.0, "linear", "STGCN", 50.0, 1.172, 0.055], [28, "LRGCN", 0.125, 4.0, "linear", "IT-STGCN", 50.0, 1.22, 0.02], [29, "LRGCN", 0.125, 4.0, "linear", "STGCN", 50.0, 1.251, 0.037], [32, "TGCN", 0.125, 12.0, "linear", "IT-STGCN", 50.0, 1.09, 0.015], [33, "TGCN", 0.125, 12.0, "linear", "STGCN", 50.0, 1.107, 0.02]];
+    const data = [[0, "DCRNN", 0.125, 2.0, "linear", "IT-STGCN", 50.0, 1.231956, 0.033401], [1, "DCRNN", 0.125, 2.0, "linear", "STGCN", 50.0, 1.260155, 0.051415], [4, "DyGrEncoder", 0.125, 12.0, "linear", "IT-STGCN", 50.0, 1.123575, 0.034644], [5, "DyGrEncoder", 0.125, 12.0, "linear", "STGCN", 50.0, 1.173105, 0.036869], [8, "EvolveGCNH", 0.125, 12.0, "linear", "IT-STGCN", 50.0, 1.18111, 0.055343], [9, "EvolveGCNH", 0.125, 12.0, "linear", "STGCN", 50.0, 1.196893, 0.076054], [12, "EvolveGCNO", 0.125, 12.0, "linear", "IT-STGCN", 50.0, 1.162306, 0.040032], [13, "EvolveGCNO", 0.125, 12.0, "linear", "STGCN", 50.0, 1.175759, 0.056186], [16, "GCLSTM", 0.125, 4.0, "linear", "IT-STGCN", 50.0, 1.218922, 0.02543], [17, "GCLSTM", 0.125, 4.0, "linear", "STGCN", 50.0, 1.24437, 0.032944], [20, "GConvGRU", 0.125, 12.0, "linear", "IT-STGCN", 50.0, 1.164965, 0.042802], [21, "GConvGRU", 0.125, 12.0, "linear", "STGCN", 50.0, 1.209643, 0.038702], [24, "GConvLSTM", 0.125, 12.0, "linear", "IT-STGCN", 50.0, 1.139817, 0.038406], [25, "GConvLSTM", 0.125, 12.0, "linear", "STGCN", 50.0, 1.171902, 0.055272], [28, "LRGCN", 0.125, 4.0, "linear", "IT-STGCN", 50.0, 1.220042, 0.01955], [29, "LRGCN", 0.125, 4.0, "linear", "STGCN", 50.0, 1.250716, 0.036803], [32, "TGCN", 0.125, 12.0, "linear", "IT-STGCN", 50.0, 1.090149, 0.015152], [33, "TGCN", 0.125, 12.0, "linear", "STGCN", 50.0, 1.106951, 0.020205]];
 
     // Define the dt_args
     let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
     dt_args["data"] = data;
 
-    let table = new DataTable('#c7d463f0-9983-425b-8ea0-a9576cf3c121', dt_args);
+    let table = new DataTable('#50439132-69c4-4dbd-8ed9-2cb5461982f8', dt_args);
 </script>
 </div>
 </div>
@@ -301,15 +367,16 @@ grid-auto-rows: minmax(0, 1fr);">
 </div>
 </div>
 <div id="chickenpox" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-chickenpox">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr) minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
 <div class="html-fill-item html-fill-container bslib-grid" data-width="50%" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-header dashboard-card-no-title bslib-navs-card-title">
 
-<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-5"><li class="nav-item" role="presentation"><a href="#card-tabset-5-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Chickenpox" aria-selected="true" class="nav-link active">Chickenpox</a></li></ul></div>
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-5"><li class="nav-item" role="presentation"><a href="#card-tabset-5-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Baseline Data" aria-selected="true" class="nav-link active">Baseline Data</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-5-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Random Missing Data" aria-selected="false" class="nav-link">Random Missing Data</a></li></ul></div>
 
-<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-5"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-5-1"><div class="card-body html-fill-item html-fill-container" data-title="Chickenpox">
+
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-5"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-5-1"><div class="card-body html-fill-item html-fill-container" data-title="Baseline Data">
 <div class="cell-output cell-output-display html-fill-item html-fill-container">
 <style>.itables table td {
     text-overflow: ellipsis;
@@ -335,17 +402,12 @@ grid-auto-rows: minmax(0, 1fr);">
 </style>
 <div class="itables html-fill-item html-fill-container">
 
-<table id="ee5d5b4c-ada8-4b8c-bd91-c146d2577112" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<table id="c3ac7aed-938e-4460-882c-003eadadc07f" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
 <thead>
 <tr class="header" style="text-align: right;">
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">model</th>
-<th data-quarto-table-cell-role="th">mrate</th>
 <th data-quarto-table-cell-role="th">nof_filters</th>
-<th data-quarto-table-cell-role="th">inter_method</th>
-<th data-quarto-table-cell-role="th">method</th>
-<th data-quarto-table-cell-role="th">lags</th>
-<th data-quarto-table-cell-role="th">epoch</th>
 <th data-quarto-table-cell-role="th">mean</th>
 <th data-quarto-table-cell-role="th">std</th>
 </tr>
@@ -355,6 +417,68 @@ grid-auto-rows: minmax(0, 1fr);">
 <td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
 <td></td>
 <td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="module">
+
+    // Define the table data
+    const data = [[0, "DCRNN", 16.0, 0.726846, 0.009031], [1, "DyGrEncoder", 12.0, 0.906012, 0.050583], [2, "EvolveGCNH", 32.0, 1.000023, 0.020088], [3, "EvolveGCNO", 32.0, 0.985902, 0.017602], [4, "GCLSTM", 16.0, 0.884723, 0.050826], [5, "GConvGRU", 16.0, 0.752125, 0.012733], [6, "GConvLSTM", 32.0, 0.958885, 0.087767], [7, "LRGCN", 8.0, 0.868465, 0.046859], [8, "TGCN", 12.0, 1.09049, 0.041544]];
+
+    // Define the dt_args
+    let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
+    dt_args["data"] = data;
+
+    let table = new DataTable('#c3ac7aed-938e-4460-882c-003eadadc07f', dt_args);
+</script>
+</div>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-5-2"><div class="card-body html-fill-item html-fill-container" data-title="Random Missing Data">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<style>.itables table td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables table th {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables thead input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.itables tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+</style>
+<div class="itables html-fill-item html-fill-container">
+
+<table id="bb26783e-ec00-4c28-8cc5-580cee9745c9" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">mrate</th>
+<th data-quarto-table-cell-role="th">inter_method</th>
+<th data-quarto-table-cell-role="th">nof_filters</th>
+<th data-quarto-table-cell-role="th">method</th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">std</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -370,13 +494,13 @@ grid-auto-rows: minmax(0, 1fr);">
 <script type="module">
 
     // Define the table data
-    const data = [[12, "DCRNN", 0.7, 2.0, "linear", "IT-STGCN", 2, 50.0, 1.247, 0.044], [13, "DCRNN", 0.7, 2.0, "linear", "STGCN", 2, 50.0, 1.271, 0.066], [32, "DyGrEncoder", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.252, 0.06], [33, "DyGrEncoder", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.548, 0.158], [52, "EvolveGCNH", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.188, 0.049], [53, "EvolveGCNH", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.228, 0.064], [72, "EvolveGCNO", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.162, 0.052], [73, "EvolveGCNO", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.198, 0.045], [92, "GCLSTM", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.228, 0.034], [93, "GCLSTM", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.245, 0.033], [112, "GConvGRU", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.18, 0.06], [113, "GConvGRU", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.858, 0.139], [132, "GConvLSTM", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.287, 0.075], [133, "GConvLSTM", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.472, 0.125], [152, "LRGCN", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.244, 0.041], [153, "LRGCN", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.261, 0.047], [172, "TGCN", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.11, 0.037], [173, "TGCN", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.184, 0.057]];
+    const data = [[0, "DCRNN", 0.3, "linear", 16.0, "IT-STGCN", 0.797419, 0.010363], [1, "DCRNN", 0.3, "linear", 16.0, "STGCN", 1.032122, 0.039405], [2, "DCRNN", 0.5, "linear", 16.0, "IT-STGCN", 0.868804, 0.018193], [3, "DCRNN", 0.5, "linear", 16.0, "STGCN", 1.473051, 0.057671], [4, "DCRNN", 0.6, "linear", 16.0, "IT-STGCN", 0.973067, 0.032359], [5, "DCRNN", 0.6, "linear", 16.0, "STGCN", 1.848062, 0.071504], [6, "DCRNN", 0.8, "linear", 16.0, "IT-STGCN", 1.467027, 0.075759], [7, "DCRNN", 0.8, "linear", 16.0, "STGCN", 2.287427, 0.073821], [8, "DyGrEncoder", 0.3, "linear", 12.0, "IT-STGCN", 0.868201, 0.028259], [9, "DyGrEncoder", 0.3, "linear", 12.0, "STGCN", 1.080103, 0.037435], [10, "DyGrEncoder", 0.5, "linear", 12.0, "IT-STGCN", 0.914506, 0.029159], [11, "DyGrEncoder", 0.5, "linear", 12.0, "STGCN", 1.540486, 0.045085], [12, "DyGrEncoder", 0.6, "linear", 12.0, "IT-STGCN", 1.012927, 0.034682], [13, "DyGrEncoder", 0.6, "linear", 12.0, "STGCN", 1.807045, 0.068092], [14, "DyGrEncoder", 0.8, "linear", 12.0, "IT-STGCN", 1.398729, 0.063095], [15, "DyGrEncoder", 0.8, "linear", 12.0, "STGCN", 2.126992, 0.240039], [16, "EvolveGCNH", 0.3, "linear", 32.0, "IT-STGCN", 1.011366, 0.019135], [17, "EvolveGCNH", 0.3, "linear", 32.0, "STGCN", 1.057721, 0.014541], [18, "EvolveGCNH", 0.5, "linear", 16.0, "IT-STGCN", 1.026308, 0.01672], [19, "EvolveGCNH", 0.5, "linear", 16.0, "STGCN", 1.121646, 0.034745], [20, "EvolveGCNH", 0.6, "linear", 16.0, "IT-STGCN", 1.054301, 0.023921], [21, "EvolveGCNH", 0.6, "linear", 16.0, "STGCN", 1.162055, 0.044484], [22, "EvolveGCNH", 0.8, "linear", 32.0, "IT-STGCN", 1.140095, 0.041585], [23, "EvolveGCNH", 0.8, "linear", 32.0, "STGCN", 1.202927, 0.060884], [24, "EvolveGCNO", 0.3, "linear", 32.0, "IT-STGCN", 0.998463, 0.018801], [25, "EvolveGCNO", 0.3, "linear", 32.0, "STGCN", 1.053731, 0.0107], [26, "EvolveGCNO", 0.5, "linear", 16.0, "IT-STGCN", 1.019928, 0.013876], [27, "EvolveGCNO", 0.5, "linear", 16.0, "STGCN", 1.144842, 0.026994], [28, "EvolveGCNO", 0.6, "linear", 16.0, "IT-STGCN", 1.050181, 0.018292], [29, "EvolveGCNO", 0.6, "linear", 16.0, "STGCN", 1.204976, 0.054876], [30, "EvolveGCNO", 0.8, "linear", 32.0, "IT-STGCN", 1.161391, 0.053718], [31, "EvolveGCNO", 0.8, "linear", 32.0, "STGCN", 1.23367, 0.095648], [32, "GCLSTM", 0.3, "linear", 16.0, "IT-STGCN", 0.850174, 0.02241], [33, "GCLSTM", 0.3, "linear", 16.0, "STGCN", 1.049751, 0.035578], [34, "GCLSTM", 0.5, "linear", 16.0, "IT-STGCN", 0.899316, 0.023286], [35, "GCLSTM", 0.5, "linear", 16.0, "STGCN", 1.514374, 0.049705], [36, "GCLSTM", 0.6, "linear", 16.0, "IT-STGCN", 1.002574, 0.029569], [37, "GCLSTM", 0.6, "linear", 16.0, "STGCN", 1.808077, 0.068741], [38, "GCLSTM", 0.8, "linear", 16.0, "IT-STGCN", 1.37055, 0.072418], [39, "GCLSTM", 0.8, "linear", 16.0, "STGCN", 2.172284, 0.185516], [40, "GConvGRU", 0.3, "linear", 16.0, "IT-STGCN", 0.850843, 0.031223], [41, "GConvGRU", 0.3, "linear", 16.0, "STGCN", 1.08735, 0.045989], [42, "GConvGRU", 0.5, "linear", 16.0, "IT-STGCN", 0.957552, 0.071943], [43, "GConvGRU", 0.5, "linear", 16.0, "STGCN", 1.530089, 0.106021], [44, "GConvGRU", 0.6, "linear", 16.0, "IT-STGCN", 1.120375, 0.072096], [45, "GConvGRU", 0.6, "linear", 16.0, "STGCN", 1.752757, 0.18103], [46, "GConvGRU", 0.8, "linear", 16.0, "IT-STGCN", 1.585524, 0.199285], [47, "GConvGRU", 0.8, "linear", 16.0, "STGCN", 2.528949, 0.292085], [48, "GConvLSTM", 0.3, "linear", 32.0, "IT-STGCN", 0.871587, 0.03498], [49, "GConvLSTM", 0.3, "linear", 32.0, "STGCN", 1.113889, 0.056892], [50, "GConvLSTM", 0.5, "linear", 32.0, "IT-STGCN", 0.900926, 0.024387], [51, "GConvLSTM", 0.5, "linear", 32.0, "STGCN", 1.518357, 0.063142], [52, "GConvLSTM", 0.6, "linear", 32.0, "IT-STGCN", 1.003927, 0.038005], [53, "GConvLSTM", 0.6, "linear", 32.0, "STGCN", 1.786721, 0.054681], [54, "GConvLSTM", 0.8, "linear", 32.0, "IT-STGCN", 1.432865, 0.080189], [55, "GConvLSTM", 0.8, "linear", 32.0, "STGCN", 2.521938, 0.111349], [56, "LRGCN", 0.3, "linear", 8.0, "IT-STGCN", 0.870065, 0.035237], [57, "LRGCN", 0.3, "linear", 8.0, "STGCN", 1.085607, 0.028528], [58, "LRGCN", 0.5, "linear", 8.0, "IT-STGCN", 0.930758, 0.033968], [59, "LRGCN", 0.5, "linear", 8.0, "STGCN", 1.458147, 0.067647], [60, "LRGCN", 0.6, "linear", 8.0, "IT-STGCN", 1.017381, 0.029128], [61, "LRGCN", 0.6, "linear", 8.0, "STGCN", 1.615393, 0.133627], [62, "LRGCN", 0.8, "linear", 8.0, "IT-STGCN", 1.333524, 0.071124], [63, "LRGCN", 0.8, "linear", 8.0, "STGCN", 1.632052, 0.156044], [64, "TGCN", 0.3, "linear", 12.0, "IT-STGCN", 1.042365, 0.020436], [65, "TGCN", 0.3, "linear", 12.0, "STGCN", 1.053646, 0.014583], [66, "TGCN", 0.5, "linear", 12.0, "IT-STGCN", 1.031901, 0.01227], [67, "TGCN", 0.5, "linear", 12.0, "STGCN", 1.167385, 0.017576], [68, "TGCN", 0.6, "linear", 12.0, "IT-STGCN", 1.053949, 0.013594], [69, "TGCN", 0.6, "linear", 12.0, "STGCN", 1.241532, 0.0213], [70, "TGCN", 0.8, "linear", 12.0, "IT-STGCN", 1.183393, 0.027691], [71, "TGCN", 0.8, "linear", 12.0, "STGCN", 1.465696, 0.064056]];
 
     // Define the dt_args
     let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
     dt_args["data"] = data;
 
-    let table = new DataTable('#ee5d5b4c-ada8-4b8c-bd91-c146d2577112', dt_args);
+    let table = new DataTable('#bb26783e-ec00-4c28-8cc5-580cee9745c9', dt_args);
 </script>
 </div>
 </div>
@@ -388,26 +512,9 @@ grid-auto-rows: minmax(0, 1fr);">
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-header dashboard-card-no-title bslib-navs-card-title">
 
-<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-6"></ul></div>
-<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-6"></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-</div>
-</div>
-</div>
-<div id="pedalme" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-pedalme">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
-<div class="html-fill-item html-fill-container bslib-grid" data-width="50%" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-6"><li class="nav-item" role="presentation"><a href="#card-tabset-6-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Tab 1" aria-selected="true" class="nav-link active">Tab 1</a></li></ul></div>
 
-<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-7"><li class="nav-item" role="presentation"><a href="#card-tabset-7-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Fivenodes" aria-selected="true" class="nav-link active">Fivenodes</a></li></ul></div>
-
-<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-7"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-7-1"><div class="card-body html-fill-item html-fill-container" data-title="Fivenodes">
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-6"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-6-1"><div class="card-body html-fill-item html-fill-container">
 <div class="cell-output cell-output-display html-fill-item html-fill-container">
 <style>.itables table td {
     text-overflow: ellipsis;
@@ -433,17 +540,15 @@ grid-auto-rows: minmax(0, 1fr);">
 </style>
 <div class="itables html-fill-item html-fill-container">
 
-<table id="28ac4cdd-121c-47d0-a642-277cee382cd7" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<table id="8df9a887-b459-4416-945b-838d810f7906" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
 <thead>
 <tr class="header" style="text-align: right;">
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">inter_method</th>
 <th data-quarto-table-cell-role="th">mrate</th>
 <th data-quarto-table-cell-role="th">nof_filters</th>
-<th data-quarto-table-cell-role="th">inter_method</th>
 <th data-quarto-table-cell-role="th">method</th>
-<th data-quarto-table-cell-role="th">lags</th>
-<th data-quarto-table-cell-role="th">epoch</th>
 <th data-quarto-table-cell-role="th">mean</th>
 <th data-quarto-table-cell-role="th">std</th>
 </tr>
@@ -451,8 +556,6 @@ grid-auto-rows: minmax(0, 1fr);">
 <tbody>
 <tr class="odd">
 <td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
-<td></td>
-<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -468,17 +571,30 @@ grid-auto-rows: minmax(0, 1fr);">
 <script type="module">
 
     // Define the table data
-    const data = [[12, "DCRNN", 0.7, 2.0, "linear", "IT-STGCN", 2, 50.0, 1.247, 0.044], [13, "DCRNN", 0.7, 2.0, "linear", "STGCN", 2, 50.0, 1.271, 0.066], [32, "DyGrEncoder", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.252, 0.06], [33, "DyGrEncoder", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.548, 0.158], [52, "EvolveGCNH", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.188, 0.049], [53, "EvolveGCNH", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.228, 0.064], [72, "EvolveGCNO", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.162, 0.052], [73, "EvolveGCNO", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.198, 0.045], [92, "GCLSTM", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.228, 0.034], [93, "GCLSTM", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.245, 0.033], [112, "GConvGRU", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.18, 0.06], [113, "GConvGRU", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.858, 0.139], [132, "GConvLSTM", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.287, 0.075], [133, "GConvLSTM", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.472, 0.125], [152, "LRGCN", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.244, 0.041], [153, "LRGCN", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.261, 0.047], [172, "TGCN", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.11, 0.037], [173, "TGCN", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.184, 0.057]];
+    const data = [[0, "DCRNN", "linear", 0.28777, 16.0, "IT-STGCN", 0.739812, 0.007356], [1, "DCRNN", "linear", 0.28777, 16.0, "STGCN", 0.812195, 0.006422], [4, "DyGrEncoder", "linear", 0.28777, 12.0, "IT-STGCN", 0.898825, 0.0346], [5, "DyGrEncoder", "linear", 0.28777, 12.0, "STGCN", 0.912353, 0.043433], [8, "EvolveGCNH", "linear", 0.28777, 32.0, "IT-STGCN", 1.0074, 0.020847], [9, "EvolveGCNH", "linear", 0.28777, 32.0, "STGCN", 1.02734, 0.022523], [12, "EvolveGCNO", "linear", 0.28777, 32.0, "IT-STGCN", 1.00235, 0.015102], [13, "EvolveGCNO", "linear", 0.28777, 32.0, "STGCN", 1.027605, 0.015945], [16, "GCLSTM", "linear", 0.28777, 16.0, "IT-STGCN", 0.883365, 0.0455], [17, "GCLSTM", "linear", 0.28777, 16.0, "STGCN", 0.889922, 0.033144], [20, "GConvGRU", "linear", 0.28777, 16.0, "IT-STGCN", 0.807041, 0.016362], [21, "GConvGRU", "linear", 0.28777, 16.0, "STGCN", 0.828224, 0.021919], [24, "GConvLSTM", "linear", 0.28777, 32.0, "IT-STGCN", 0.910567, 0.068879], [25, "GConvLSTM", "linear", 0.28777, 32.0, "STGCN", 0.900495, 0.049101], [28, "LRGCN", "linear", 0.28777, 8.0, "IT-STGCN", 0.88821, 0.034704], [29, "LRGCN", "linear", 0.28777, 8.0, "STGCN", 0.910671, 0.047118], [32, "TGCN", "linear", 0.28777, 12.0, "IT-STGCN", 1.064651, 0.030813], [33, "TGCN", "linear", 0.28777, 12.0, "STGCN", 1.082494, 0.028106]];
 
     // Define the dt_args
     let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
     dt_args["data"] = data;
 
-    let table = new DataTable('#28ac4cdd-121c-47d0-a642-277cee382cd7', dt_args);
+    let table = new DataTable('#8df9a887-b459-4416-945b-838d810f7906', dt_args);
 </script>
 </div>
 </div>
 </div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" data-width="50%" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-7"></ul></div>
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-7"></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
     <span class="bslib-full-screen-enter badge rounded-pill">
         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
@@ -496,16 +612,17 @@ grid-auto-rows: minmax(0, 1fr);">
 </div>
 </div>
 </div>
-<div id="wikimath" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-wikimath">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div id="pedalme" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-pedalme">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr) minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
 <div class="html-fill-item html-fill-container bslib-grid" data-width="50%" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-header dashboard-card-no-title bslib-navs-card-title">
 
-<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-9"><li class="nav-item" role="presentation"><a href="#card-tabset-9-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Fivenodes" aria-selected="true" class="nav-link active">Fivenodes</a></li></ul></div>
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-9"><li class="nav-item" role="presentation"><a href="#card-tabset-9-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Baseline Data" aria-selected="true" class="nav-link active">Baseline Data</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-9-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Random Missing Data" aria-selected="false" class="nav-link">Random Missing Data</a></li></ul></div>
 
-<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-9"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-9-1"><div class="card-body html-fill-item html-fill-container" data-title="Fivenodes">
+
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-9"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-9-1"><div class="card-body html-fill-item html-fill-container" data-title="Baseline Data">
 <div class="cell-output cell-output-display html-fill-item html-fill-container">
 <style>.itables table td {
     text-overflow: ellipsis;
@@ -531,17 +648,13 @@ grid-auto-rows: minmax(0, 1fr);">
 </style>
 <div class="itables html-fill-item html-fill-container">
 
-<table id="ae969ddc-58a8-48ec-8d68-f2395c024e46" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<table id="ea9d4e29-b9fa-4644-bd38-990b470f873e" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
 <thead>
 <tr class="header" style="text-align: right;">
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">model</th>
-<th data-quarto-table-cell-role="th">mrate</th>
-<th data-quarto-table-cell-role="th">nof_filters</th>
-<th data-quarto-table-cell-role="th">inter_method</th>
-<th data-quarto-table-cell-role="th">method</th>
 <th data-quarto-table-cell-role="th">lags</th>
-<th data-quarto-table-cell-role="th">epoch</th>
+<th data-quarto-table-cell-role="th">nof_filters</th>
 <th data-quarto-table-cell-role="th">mean</th>
 <th data-quarto-table-cell-role="th">std</th>
 </tr>
@@ -551,6 +664,69 @@ grid-auto-rows: minmax(0, 1fr);">
 <td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
 <td></td>
 <td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="module">
+
+    // Define the table data
+    const data = [[0, "DCRNN", 4, 8.0, 1.131112, 0.015162], [1, "DyGrEncoder", 4, 12.0, 1.189923, 0.047077], [2, "EvolveGCNH", 4, 2.0, 1.213384, 0.057137], [3, "EvolveGCNO", 4, 2.0, 1.223478, 0.050838], [4, "GCLSTM", 4, 4.0, 1.180607, 0.039766], [5, "GConvGRU", 4, 12.0, 1.233027, 0.106979], [6, "GConvLSTM", 4, 2.0, 1.214062, 0.054574], [7, "LRGCN", 4, 8.0, 1.190586, 0.054398], [8, "TGCN", 4, 12.0, 1.307446, 0.074915]];
+
+    // Define the dt_args
+    let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
+    dt_args["data"] = data;
+
+    let table = new DataTable('#ea9d4e29-b9fa-4644-bd38-990b470f873e', dt_args);
+</script>
+</div>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-9-2"><div class="card-body html-fill-item html-fill-container" data-title="Random Missing Data">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<style>.itables table td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables table th {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables thead input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.itables tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+</style>
+<div class="itables html-fill-item html-fill-container">
+
+<table id="42b712f9-3f90-4fd1-a0fb-e05054786620" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">mrate</th>
+<th data-quarto-table-cell-role="th">lags</th>
+<th data-quarto-table-cell-role="th">inter_method</th>
+<th data-quarto-table-cell-role="th">method</th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">std</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -566,13 +742,13 @@ grid-auto-rows: minmax(0, 1fr);">
 <script type="module">
 
     // Define the table data
-    const data = [[12, "DCRNN", 0.7, 2.0, "linear", "IT-STGCN", 2, 50.0, 1.247, 0.044], [13, "DCRNN", 0.7, 2.0, "linear", "STGCN", 2, 50.0, 1.271, 0.066], [32, "DyGrEncoder", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.252, 0.06], [33, "DyGrEncoder", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.548, 0.158], [52, "EvolveGCNH", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.188, 0.049], [53, "EvolveGCNH", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.228, 0.064], [72, "EvolveGCNO", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.162, 0.052], [73, "EvolveGCNO", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.198, 0.045], [92, "GCLSTM", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.228, 0.034], [93, "GCLSTM", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.245, 0.033], [112, "GConvGRU", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.18, 0.06], [113, "GConvGRU", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.858, 0.139], [132, "GConvLSTM", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.287, 0.075], [133, "GConvLSTM", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.472, 0.125], [152, "LRGCN", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.244, 0.041], [153, "LRGCN", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.261, 0.047], [172, "TGCN", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.11, 0.037], [173, "TGCN", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.184, 0.057]];
+    const data = [[2, "DCRNN", 0.3, 4, "nearest", "IT-STGCN", 1.179478, 0.034787], [3, "DCRNN", 0.3, 4, "nearest", "STGCN", 1.277959, 0.060496], [6, "DCRNN", 0.5, 4, "nearest", "IT-STGCN", 1.231754, 0.060902], [7, "DCRNN", 0.5, 4, "nearest", "STGCN", 1.446774, 0.072927], [10, "DCRNN", 0.6, 4, "nearest", "IT-STGCN", 1.303194, 0.077524], [11, "DCRNN", 0.6, 4, "nearest", "STGCN", 1.508964, 0.068024], [14, "DCRNN", 0.8, 4, "nearest", "IT-STGCN", 1.52705, 0.07918], [15, "DCRNN", 0.8, 4, "nearest", "STGCN", 1.615715, 0.075023], [18, "DyGrEncoder", 0.3, 4, "nearest", "IT-STGCN", 1.205276, 0.074982], [19, "DyGrEncoder", 0.3, 4, "nearest", "STGCN", 1.289089, 0.096336], [22, "DyGrEncoder", 0.5, 4, "nearest", "IT-STGCN", 1.236144, 0.059043], [23, "DyGrEncoder", 0.5, 4, "nearest", "STGCN", 1.427197, 0.075787], [26, "DyGrEncoder", 0.6, 4, "nearest", "IT-STGCN", 1.285063, 0.05138], [27, "DyGrEncoder", 0.6, 4, "nearest", "STGCN", 1.513474, 0.083109], [30, "DyGrEncoder", 0.8, 4, "nearest", "IT-STGCN", 1.475852, 0.098498], [31, "DyGrEncoder", 0.8, 4, "nearest", "STGCN", 1.613556, 0.095548], [34, "EvolveGCNH", 0.3, 4, "nearest", "IT-STGCN", 1.237675, 0.046478], [35, "EvolveGCNH", 0.3, 4, "nearest", "STGCN", 1.244093, 0.053899], [38, "EvolveGCNH", 0.5, 4, "nearest", "IT-STGCN", 1.241559, 0.058126], [39, "EvolveGCNH", 0.5, 4, "nearest", "STGCN", 1.285256, 0.049314], [42, "EvolveGCNH", 0.6, 4, "nearest", "IT-STGCN", 1.262037, 0.091143], [43, "EvolveGCNH", 0.6, 4, "nearest", "STGCN", 1.283533, 0.065707], [46, "EvolveGCNH", 0.8, 4, "nearest", "IT-STGCN", 1.298918, 0.082032], [47, "EvolveGCNH", 0.8, 4, "nearest", "STGCN", 1.29233, 0.073851], [50, "EvolveGCNO", 0.3, 4, "nearest", "IT-STGCN", 1.250662, 0.056574], [51, "EvolveGCNO", 0.3, 4, "nearest", "STGCN", 1.264678, 0.056446], [54, "EvolveGCNO", 0.5, 4, "nearest", "IT-STGCN", 1.254017, 0.037178], [55, "EvolveGCNO", 0.5, 4, "nearest", "STGCN", 1.273813, 0.079758], [58, "EvolveGCNO", 0.6, 4, "nearest", "IT-STGCN", 1.267201, 0.067229], [59, "EvolveGCNO", 0.6, 4, "nearest", "STGCN", 1.292481, 0.075259], [62, "EvolveGCNO", 0.8, 4, "nearest", "IT-STGCN", 1.311548, 0.07263], [63, "EvolveGCNO", 0.8, 4, "nearest", "STGCN", 1.333635, 0.144189], [66, "GCLSTM", 0.3, 4, "nearest", "IT-STGCN", 1.210644, 0.038918], [67, "GCLSTM", 0.3, 4, "nearest", "STGCN", 1.256362, 0.037895], [70, "GCLSTM", 0.5, 4, "nearest", "IT-STGCN", 1.221013, 0.041702], [71, "GCLSTM", 0.5, 4, "nearest", "STGCN", 1.33319, 0.065934], [74, "GCLSTM", 0.6, 4, "nearest", "IT-STGCN", 1.259146, 0.042408], [75, "GCLSTM", 0.6, 4, "nearest", "STGCN", 1.365274, 0.063681], [78, "GCLSTM", 0.8, 4, "nearest", "IT-STGCN", 1.351805, 0.049917], [79, "GCLSTM", 0.8, 4, "nearest", "STGCN", 1.396379, 0.078668], [82, "GConvGRU", 0.3, 4, "nearest", "IT-STGCN", 1.384792, 0.172709], [83, "GConvGRU", 0.3, 4, "nearest", "STGCN", 1.527193, 0.341814], [86, "GConvGRU", 0.5, 4, "nearest", "IT-STGCN", 1.507224, 0.23506], [87, "GConvGRU", 0.5, 4, "nearest", "STGCN", 1.673252, 0.222965], [90, "GConvGRU", 0.6, 4, "nearest", "IT-STGCN", 1.624999, 0.324219], [91, "GConvGRU", 0.6, 4, "nearest", "STGCN", 1.851451, 0.253582], [94, "GConvGRU", 0.8, 4, "nearest", "IT-STGCN", 1.60787, 0.24339], [95, "GConvGRU", 0.8, 4, "nearest", "STGCN", 1.871183, 0.213666], [98, "GConvLSTM", 0.3, 4, "nearest", "IT-STGCN", 1.223629, 0.034596], [99, "GConvLSTM", 0.3, 4, "nearest", "STGCN", 1.265794, 0.068072], [102, "GConvLSTM", 0.5, 4, "nearest", "IT-STGCN", 1.235134, 0.041545], [103, "GConvLSTM", 0.5, 4, "nearest", "STGCN", 1.283231, 0.071115], [106, "GConvLSTM", 0.6, 4, "nearest", "IT-STGCN", 1.247621, 0.045291], [107, "GConvLSTM", 0.6, 4, "nearest", "STGCN", 1.273915, 0.078412], [110, "GConvLSTM", 0.8, 4, "nearest", "IT-STGCN", 1.286562, 0.064903], [111, "GConvLSTM", 0.8, 4, "nearest", "STGCN", 1.363731, 0.06942], [113, "GNAR", 0.3, 4, "nearest", "GNAR", 1.302679, 0.0], [115, "GNAR", 0.5, 4, "nearest", "GNAR", 1.302679, 0.0], [117, "GNAR", 0.6, 4, "nearest", "GNAR", 1.302679, 0.0], [119, "GNAR", 0.8, 4, "nearest", "GNAR", 1.302679, 0.0], [122, "LRGCN", 0.3, 4, "nearest", "IT-STGCN", 1.220494, 0.045683], [123, "LRGCN", 0.3, 4, "nearest", "STGCN", 1.287463, 0.065494], [126, "LRGCN", 0.5, 4, "nearest", "IT-STGCN", 1.240143, 0.036206], [127, "LRGCN", 0.5, 4, "nearest", "STGCN", 1.379414, 0.079493], [130, "LRGCN", 0.6, 4, "nearest", "IT-STGCN", 1.286243, 0.032782], [131, "LRGCN", 0.6, 4, "nearest", "STGCN", 1.462139, 0.084401], [134, "LRGCN", 0.8, 4, "nearest", "IT-STGCN", 1.436206, 0.091456], [135, "LRGCN", 0.8, 4, "nearest", "STGCN", 1.529204, 0.070805], [138, "TGCN", 0.3, 4, "nearest", "IT-STGCN", 1.248469, 0.074241], [139, "TGCN", 0.3, 4, "nearest", "STGCN", 1.29139, 0.110856], [142, "TGCN", 0.5, 4, "nearest", "IT-STGCN", 1.258515, 0.066367], [143, "TGCN", 0.5, 4, "nearest", "STGCN", 1.287042, 0.064769], [146, "TGCN", 0.6, 4, "nearest", "IT-STGCN", 1.260074, 0.071743], [147, "TGCN", 0.6, 4, "nearest", "STGCN", 1.300789, 0.090144], [150, "TGCN", 0.8, 4, "nearest", "IT-STGCN", 1.257752, 0.053121], [151, "TGCN", 0.8, 4, "nearest", "STGCN", 1.277077, 0.079977]];
 
     // Define the dt_args
     let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
     dt_args["data"] = data;
 
-    let table = new DataTable('#ae969ddc-58a8-48ec-8d68-f2395c024e46', dt_args);
+    let table = new DataTable('#42b712f9-3f90-4fd1-a0fb-e05054786620', dt_args);
 </script>
 </div>
 </div>
@@ -584,26 +760,9 @@ grid-auto-rows: minmax(0, 1fr);">
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-header dashboard-card-no-title bslib-navs-card-title">
 
-<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-10"></ul></div>
-<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-10"></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-</div>
-</div>
-</div>
-<div id="windmillsmall" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-windmillsmall">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
-<div class="html-fill-item html-fill-container bslib-grid" data-width="50%" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-10"><li class="nav-item" role="presentation"><a href="#card-tabset-10-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Block Missing Data" aria-selected="true" class="nav-link active">Block Missing Data</a></li></ul></div>
 
-<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-11"><li class="nav-item" role="presentation"><a href="#card-tabset-11-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Fivenodes" aria-selected="true" class="nav-link active">Fivenodes</a></li></ul></div>
-
-<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-11"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-11-1"><div class="card-body html-fill-item html-fill-container" data-title="Fivenodes">
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-10"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-10-1"><div class="card-body html-fill-item html-fill-container" data-title="Block Missing Data">
 <div class="cell-output cell-output-display html-fill-item html-fill-container">
 <style>.itables table td {
     text-overflow: ellipsis;
@@ -629,17 +788,15 @@ grid-auto-rows: minmax(0, 1fr);">
 </style>
 <div class="itables html-fill-item html-fill-container">
 
-<table id="c8407af4-cb82-4e9e-a73a-ec3791b15c28" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<table id="c5381658-c6d5-413c-b1de-b109c789b8e3" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
 <thead>
 <tr class="header" style="text-align: right;">
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">model</th>
 <th data-quarto-table-cell-role="th">mrate</th>
-<th data-quarto-table-cell-role="th">nof_filters</th>
+<th data-quarto-table-cell-role="th">lags</th>
 <th data-quarto-table-cell-role="th">inter_method</th>
 <th data-quarto-table-cell-role="th">method</th>
-<th data-quarto-table-cell-role="th">lags</th>
-<th data-quarto-table-cell-role="th">epoch</th>
 <th data-quarto-table-cell-role="th">mean</th>
 <th data-quarto-table-cell-role="th">std</th>
 </tr>
@@ -647,8 +804,6 @@ grid-auto-rows: minmax(0, 1fr);">
 <tbody>
 <tr class="odd">
 <td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
-<td></td>
-<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -664,17 +819,30 @@ grid-auto-rows: minmax(0, 1fr);">
 <script type="module">
 
     // Define the table data
-    const data = [[12, "DCRNN", 0.7, 2.0, "linear", "IT-STGCN", 2, 50.0, 1.247, 0.044], [13, "DCRNN", 0.7, 2.0, "linear", "STGCN", 2, 50.0, 1.271, 0.066], [32, "DyGrEncoder", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.252, 0.06], [33, "DyGrEncoder", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.548, 0.158], [52, "EvolveGCNH", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.188, 0.049], [53, "EvolveGCNH", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.228, 0.064], [72, "EvolveGCNO", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.162, 0.052], [73, "EvolveGCNO", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.198, 0.045], [92, "GCLSTM", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.228, 0.034], [93, "GCLSTM", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.245, 0.033], [112, "GConvGRU", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.18, 0.06], [113, "GConvGRU", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.858, 0.139], [132, "GConvLSTM", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.287, 0.075], [133, "GConvLSTM", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.472, 0.125], [152, "LRGCN", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.244, 0.041], [153, "LRGCN", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.261, 0.047], [172, "TGCN", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.11, 0.037], [173, "TGCN", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.184, 0.057]];
+    const data = [[2, "DCRNN", 0.285714, 4, "nearest", "IT-STGCN", 1.149813, 0.014213], [3, "DCRNN", 0.285714, 4, "nearest", "STGCN", 1.304476, 0.021128], [6, "DyGrEncoder", 0.285714, 4, "nearest", "IT-STGCN", 1.164742, 0.032223], [7, "DyGrEncoder", 0.285714, 4, "nearest", "STGCN", 1.268852, 0.065571], [10, "EvolveGCNH", 0.285714, 4, "nearest", "IT-STGCN", 1.221956, 0.040193], [11, "EvolveGCNH", 0.285714, 4, "nearest", "STGCN", 1.265326, 0.071655], [14, "EvolveGCNO", 0.285714, 4, "nearest", "IT-STGCN", 1.245137, 0.044659], [15, "EvolveGCNO", 0.285714, 4, "nearest", "STGCN", 1.246135, 0.035122], [18, "GCLSTM", 0.285714, 4, "nearest", "IT-STGCN", 1.195436, 0.028662], [19, "GCLSTM", 0.285714, 4, "nearest", "STGCN", 1.247657, 0.018977], [22, "GConvGRU", 0.285714, 4, "nearest", "IT-STGCN", 1.288922, 0.115122], [23, "GConvGRU", 0.285714, 4, "nearest", "STGCN", 1.27008, 0.114075], [26, "GConvLSTM", 0.285714, 4, "nearest", "IT-STGCN", 1.221524, 0.038925], [27, "GConvLSTM", 0.285714, 4, "nearest", "STGCN", 1.23707, 0.046198], [29, "GNAR", 0.285714, 4, "nearest", "GNAR", 1.302679, 0.0], [32, "LRGCN", 0.285714, 4, "nearest", "IT-STGCN", 1.164636, 0.035278], [33, "LRGCN", 0.285714, 4, "nearest", "STGCN", 1.262744, 0.033121], [36, "TGCN", 0.285714, 4, "nearest", "IT-STGCN", 1.261946, 0.066261], [37, "TGCN", 0.285714, 4, "nearest", "STGCN", 1.23208, 0.069481]];
 
     // Define the dt_args
     let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
     dt_args["data"] = data;
 
-    let table = new DataTable('#c8407af4-cb82-4e9e-a73a-ec3791b15c28', dt_args);
+    let table = new DataTable('#c5381658-c6d5-413c-b1de-b109c789b8e3', dt_args);
 </script>
 </div>
 </div>
 </div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" data-width="50%" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-11"></ul></div>
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-11"></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
     <span class="bslib-full-screen-enter badge rounded-pill">
         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
@@ -692,16 +860,17 @@ grid-auto-rows: minmax(0, 1fr);">
 </div>
 </div>
 </div>
-<div id="montevideobus" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-montevideobus">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div id="wikimath" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-wikimath">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr) minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
 <div class="html-fill-item html-fill-container bslib-grid" data-width="50%" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-header dashboard-card-no-title bslib-navs-card-title">
 
-<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-13"><li class="nav-item" role="presentation"><a href="#card-tabset-13-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Fivenodes" aria-selected="true" class="nav-link active">Fivenodes</a></li></ul></div>
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-13"><li class="nav-item" role="presentation"><a href="#card-tabset-13-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Baseline Data" aria-selected="true" class="nav-link active">Baseline Data</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-13-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Random Missing Data" aria-selected="false" class="nav-link">Random Missing Data</a></li></ul></div>
 
-<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-13"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-13-1"><div class="card-body html-fill-item html-fill-container" data-title="Fivenodes">
+
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-13"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-13-1"><div class="card-body html-fill-item html-fill-container" data-title="Baseline Data">
 <div class="cell-output cell-output-display html-fill-item html-fill-container">
 <style>.itables table td {
     text-overflow: ellipsis;
@@ -727,17 +896,14 @@ grid-auto-rows: minmax(0, 1fr);">
 </style>
 <div class="itables html-fill-item html-fill-container">
 
-<table id="f140cdef-18dc-4043-bf82-d2c3d94b1ade" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<table id="6b2d58eb-28dd-4778-9284-3b8ef1e44bb5" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
 <thead>
 <tr class="header" style="text-align: right;">
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">model</th>
-<th data-quarto-table-cell-role="th">mrate</th>
-<th data-quarto-table-cell-role="th">nof_filters</th>
-<th data-quarto-table-cell-role="th">inter_method</th>
-<th data-quarto-table-cell-role="th">method</th>
 <th data-quarto-table-cell-role="th">lags</th>
-<th data-quarto-table-cell-role="th">epoch</th>
+<th data-quarto-table-cell-role="th">nof_filters</th>
+<th data-quarto-table-cell-role="th">method</th>
 <th data-quarto-table-cell-role="th">mean</th>
 <th data-quarto-table-cell-role="th">std</th>
 </tr>
@@ -746,6 +912,489 @@ grid-auto-rows: minmax(0, 1fr);">
 <tr class="odd">
 <td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
 <td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="module">
+
+    // Define the table data
+    const data = [[0, "DCRNN", 8, 12.0, "IT-STGCN", 0.582146, 0.006025], [1, "DCRNN", 8, 12.0, "STGCN", 0.579704, 0.006485], [2, "DyGrEncoder", 8, 12.0, "IT-STGCN", 0.562545, 0.030274], [3, "DyGrEncoder", 8, 12.0, "STGCN", 0.56008, 0.028723], [4, "EvolveGCNH", 8, 12.0, "IT-STGCN", 0.784247, 0.026992], [5, "EvolveGCNH", 8, 12.0, "STGCN", 0.770507, 0.027504], [6, "EvolveGCNO", 8, 12.0, "IT-STGCN", 0.734536, 0.02255], [7, "EvolveGCNO", 8, 12.0, "STGCN", 0.733725, 0.025135], [8, "GCLSTM", 8, 64.0, "IT-STGCN", 0.64285, 0.023886], [9, "GCLSTM", 8, 64.0, "STGCN", 0.644963, 0.01766], [10, "GConvGRU", 8, 12.0, "IT-STGCN", 0.528602, 0.002561], [11, "GConvGRU", 8, 12.0, "STGCN", 0.527653, 0.002878], [12, "GConvLSTM", 8, 64.0, "IT-STGCN", 0.626372, 0.015429], [13, "GConvLSTM", 8, 64.0, "STGCN", 0.639792, 0.031258], [14, "LRGCN", 8, 32.0, "IT-STGCN", 0.610229, 0.016535], [15, "LRGCN", 8, 32.0, "STGCN", 0.608059, 0.013538], [16, "TGCN", 8, 12.0, "IT-STGCN", 0.729507, 0.030213], [17, "TGCN", 8, 12.0, "STGCN", 0.732403, 0.034636]];
+
+    // Define the dt_args
+    let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
+    dt_args["data"] = data;
+
+    let table = new DataTable('#6b2d58eb-28dd-4778-9284-3b8ef1e44bb5', dt_args);
+</script>
+</div>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-13-2"><div class="card-body html-fill-item html-fill-container" data-title="Random Missing Data">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<style>.itables table td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables table th {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables thead input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.itables tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+</style>
+<div class="itables html-fill-item html-fill-container">
+
+<table id="200a92e6-262c-4a34-8889-a206f3900561" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">mrate</th>
+<th data-quarto-table-cell-role="th">lags</th>
+<th data-quarto-table-cell-role="th">inter_method</th>
+<th data-quarto-table-cell-role="th">method</th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">std</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="module">
+
+    // Define the table data
+    const data = [[0, "DCRNN", 0.3, 8, "linear", "IT-STGCN", 0.587664, 0.00652], [1, "DCRNN", 0.3, 8, "linear", "STGCN", 0.603004, 0.009801], [2, "DCRNN", 0.5, 8, "linear", "IT-STGCN", 0.589744, 0.005749], [3, "DCRNN", 0.5, 8, "linear", "STGCN", 0.651864, 0.014627], [4, "DCRNN", 0.6, 8, "linear", "IT-STGCN", 0.59194, 0.005411], [5, "DCRNN", 0.6, 8, "linear", "STGCN", 0.688096, 0.010605], [6, "DCRNN", 0.8, 8, "linear", "IT-STGCN", 0.672402, 0.006952], [7, "DCRNN", 0.8, 8, "linear", "STGCN", 0.846483, 0.031332], [8, "DyGrEncoder", 0.3, 8, "linear", "IT-STGCN", 0.578214, 0.030853], [9, "DyGrEncoder", 0.3, 8, "linear", "STGCN", 0.561796, 0.015995], [10, "DyGrEncoder", 0.5, 8, "linear", "IT-STGCN", 0.56461, 0.023971], [11, "DyGrEncoder", 0.5, 8, "linear", "STGCN", 0.613511, 0.024015], [12, "DyGrEncoder", 0.6, 8, "linear", "IT-STGCN", 0.56603, 0.020522], [13, "DyGrEncoder", 0.6, 8, "linear", "STGCN", 0.643844, 0.031556], [14, "DyGrEncoder", 0.8, 8, "linear", "IT-STGCN", 0.60592, 0.01687], [15, "DyGrEncoder", 0.8, 8, "linear", "STGCN", 0.770463, 0.045045], [16, "EvolveGCNH", 0.3, 8, "linear", "IT-STGCN", 0.775076, 0.021265], [17, "EvolveGCNH", 0.3, 8, "linear", "STGCN", 0.786979, 0.023907], [18, "EvolveGCNH", 0.5, 8, "linear", "IT-STGCN", 0.791145, 0.028841], [19, "EvolveGCNH", 0.5, 8, "linear", "STGCN", 0.804467, 0.025915], [20, "EvolveGCNH", 0.6, 8, "linear", "IT-STGCN", 0.795029, 0.024815], [21, "EvolveGCNH", 0.6, 8, "linear", "STGCN", 0.842797, 0.041845], [22, "EvolveGCNH", 0.8, 8, "linear", "IT-STGCN", 0.877254, 0.044948], [23, "EvolveGCNH", 0.8, 8, "linear", "STGCN", 0.914908, 0.062838], [24, "EvolveGCNO", 0.3, 8, "linear", "IT-STGCN", 0.737998, 0.018014], [25, "EvolveGCNO", 0.3, 8, "linear", "STGCN", 0.743031, 0.023798], [26, "EvolveGCNO", 0.5, 8, "linear", "IT-STGCN", 0.74362, 0.021492], [27, "EvolveGCNO", 0.5, 8, "linear", "STGCN", 0.758955, 0.021245], [28, "EvolveGCNO", 0.6, 8, "linear", "IT-STGCN", 0.744794, 0.018896], [29, "EvolveGCNO", 0.6, 8, "linear", "STGCN", 0.775408, 0.025836], [30, "EvolveGCNO", 0.8, 8, "linear", "IT-STGCN", 0.780165, 0.027376], [31, "EvolveGCNO", 0.8, 8, "linear", "STGCN", 0.863314, 0.038366], [32, "GCLSTM", 0.3, 8, "linear", "IT-STGCN", 0.628291, 0.019699], [33, "GCLSTM", 0.3, 8, "linear", "STGCN", 0.673644, 0.020171], [34, "GCLSTM", 0.5, 8, "linear", "IT-STGCN", 0.625591, 0.010222], [35, "GCLSTM", 0.5, 8, "linear", "STGCN", 0.824882, 0.044507], [36, "GCLSTM", 0.6, 8, "linear", "IT-STGCN", 0.650251, 0.021177], [37, "GCLSTM", 0.6, 8, "linear", "STGCN", 0.942362, 0.077921], [38, "GCLSTM", 0.8, 8, "linear", "IT-STGCN", 0.81493, 0.057576], [39, "GCLSTM", 0.8, 8, "linear", "STGCN", 1.40677, 0.116645], [40, "GConvGRU", 0.3, 8, "linear", "IT-STGCN", 0.518051, 0.001626], [41, "GConvGRU", 0.3, 8, "linear", "STGCN", 0.57036, 0.005988], [42, "GConvGRU", 0.5, 8, "linear", "IT-STGCN", 0.523967, 0.003376], [43, "GConvGRU", 0.5, 8, "linear", "STGCN", 0.658467, 0.01046], [44, "GConvGRU", 0.6, 8, "linear", "IT-STGCN", 0.538837, 0.00417], [45, "GConvGRU", 0.6, 8, "linear", "STGCN", 0.731324, 0.01541], [46, "GConvGRU", 0.8, 8, "linear", "IT-STGCN", 0.686799, 0.021318], [47, "GConvGRU", 0.8, 8, "linear", "STGCN", 0.932352, 0.043388], [48, "GConvLSTM", 0.3, 8, "linear", "IT-STGCN", 0.63081, 0.018981], [49, "GConvLSTM", 0.3, 8, "linear", "STGCN", 0.764285, 0.057003], [50, "GConvLSTM", 0.5, 8, "linear", "IT-STGCN", 0.668641, 0.034122], [51, "GConvLSTM", 0.5, 8, "linear", "STGCN", 0.965166, 0.077108], [52, "GConvLSTM", 0.6, 8, "linear", "IT-STGCN", 0.731399, 0.047747], [53, "GConvLSTM", 0.6, 8, "linear", "STGCN", 1.10363, 0.077726], [54, "GConvLSTM", 0.8, 8, "linear", "IT-STGCN", 0.920304, 0.068694], [55, "GConvLSTM", 0.8, 8, "linear", "STGCN", 1.423042, 0.121288], [56, "GNAR", 0.3, 8, "linear", "GNAR", 1.353637, 0.0], [57, "GNAR", 0.8, 8, "linear", "GNAR", 1.353637, 0.0], [58, "LRGCN", 0.3, 8, "linear", "IT-STGCN", 0.61946, 0.018946], [59, "LRGCN", 0.3, 8, "linear", "STGCN", 0.689363, 0.031513], [60, "LRGCN", 0.5, 8, "linear", "IT-STGCN", 0.621106, 0.015081], [61, "LRGCN", 0.5, 8, "linear", "STGCN", 0.837595, 0.054353], [62, "LRGCN", 0.6, 8, "linear", "IT-STGCN", 0.647578, 0.024153], [63, "LRGCN", 0.6, 8, "linear", "STGCN", 0.917251, 0.063079], [64, "LRGCN", 0.8, 8, "linear", "IT-STGCN", 0.769075, 0.045226], [65, "LRGCN", 0.8, 8, "linear", "STGCN", 1.10533, 0.098601], [66, "TGCN", 0.3, 8, "linear", "IT-STGCN", 0.739205, 0.040303], [67, "TGCN", 0.3, 8, "linear", "STGCN", 0.734482, 0.026531], [68, "TGCN", 0.5, 8, "linear", "IT-STGCN", 0.756639, 0.04626], [69, "TGCN", 0.5, 8, "linear", "STGCN", 0.757365, 0.034211], [70, "TGCN", 0.6, 8, "linear", "IT-STGCN", 0.741643, 0.030133], [71, "TGCN", 0.6, 8, "linear", "STGCN", 0.774255, 0.02453], [72, "TGCN", 0.8, 8, "linear", "IT-STGCN", 0.770845, 0.020449], [73, "TGCN", 0.8, 8, "linear", "STGCN", 0.82663, 0.030296]];
+
+    // Define the dt_args
+    let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
+    dt_args["data"] = data;
+
+    let table = new DataTable('#200a92e6-262c-4a34-8889-a206f3900561', dt_args);
+</script>
+</div>
+</div>
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-14"><li class="nav-item" role="presentation"><a href="#card-tabset-14-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Block Missing Data" aria-selected="true" class="nav-link active">Block Missing Data</a></li></ul></div>
+
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-14"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-14-1"><div class="card-body html-fill-item html-fill-container" data-title="Block Missing Data">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<style>.itables table td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables table th {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables thead input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.itables tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+</style>
+<div class="itables html-fill-item html-fill-container">
+
+<table id="a9fe6b39-c125-4582-bd3e-bc30cb08b942" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">mrate</th>
+<th data-quarto-table-cell-role="th">lags</th>
+<th data-quarto-table-cell-role="th">inter_method</th>
+<th data-quarto-table-cell-role="th">method</th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">std</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="module">
+
+    // Define the table data
+    const data = [[0, "DCRNN", 0.119837, 8, "linear", "IT-STGCN", 0.582594, 0.006427], [1, "DCRNN", 0.119837, 8, "linear", "STGCN", 0.578406, 0.004975], [2, "DyGrEncoder", 0.119837, 8, "linear", "IT-STGCN", 0.563498, 0.024983], [3, "DyGrEncoder", 0.119837, 8, "linear", "STGCN", 0.546224, 0.015992], [4, "EvolveGCNH", 0.119837, 8, "linear", "IT-STGCN", 0.775854, 0.02786], [5, "EvolveGCNH", 0.119837, 8, "linear", "STGCN", 0.773374, 0.020599], [6, "EvolveGCNO", 0.119837, 8, "linear", "IT-STGCN", 0.732454, 0.025087], [7, "EvolveGCNO", 0.119837, 8, "linear", "STGCN", 0.734875, 0.021822], [8, "GCLSTM", 0.119837, 8, "linear", "IT-STGCN", 0.640461, 0.019198], [9, "GCLSTM", 0.119837, 8, "linear", "STGCN", 0.637772, 0.012983], [10, "GConvGRU", 0.003835, 8, "linear", "IT-STGCN", 0.528737, 0.002806], [11, "GConvGRU", 0.003835, 8, "linear", "STGCN", 0.527871, 0.002606], [12, "GConvGRU", 0.09587, 8, "linear", "IT-STGCN", 0.52944, 0.00382], [13, "GConvGRU", 0.09587, 8, "linear", "STGCN", 0.544176, 0.010772], [14, "GConvGRU", 0.119837, 8, "linear", "IT-STGCN", 0.522825, 0.002422], [15, "GConvGRU", 0.119837, 8, "linear", "STGCN", 0.531188, 0.002295], [16, "GConvLSTM", 0.119837, 8, "linear", "IT-STGCN", 0.627324, 0.013908], [17, "GConvLSTM", 0.119837, 8, "linear", "STGCN", 0.660386, 0.033577], [18, "GNAR", 0.119837, 8, "linear", "GNAR", 1.353637, 0.0], [19, "LRGCN", 0.119837, 8, "linear", "IT-STGCN", 0.608375, 0.012177], [20, "LRGCN", 0.119837, 8, "linear", "STGCN", 0.62425, 0.023857], [21, "TGCN", 0.119837, 8, "linear", "IT-STGCN", 0.747581, 0.045961], [22, "TGCN", 0.119837, 8, "linear", "STGCN", 0.741134, 0.046269]];
+
+    // Define the dt_args
+    let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
+    dt_args["data"] = data;
+
+    let table = new DataTable('#a9fe6b39-c125-4582-bd3e-bc30cb08b942', dt_args);
+</script>
+</div>
+</div>
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" data-width="50%" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-15"></ul></div>
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-15"></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+<div id="windmillsmall" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-windmillsmall">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr) minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" data-width="50%" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-16"><li class="nav-item" role="presentation"><a href="#card-tabset-16-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Baseline Data" aria-selected="true" class="nav-link active">Baseline Data</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-16-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Random Missing Data" aria-selected="false" class="nav-link">Random Missing Data</a></li></ul></div>
+
+
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-16"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-16-1"><div class="card-body html-fill-item html-fill-container" data-title="Baseline Data">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<style>.itables table td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables table th {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables thead input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.itables tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+</style>
+<div class="itables html-fill-item html-fill-container">
+
+<table id="5983e203-f28d-43db-ab7b-6acfdd13f6aa" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">lags</th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">std</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="module">
+
+    // Define the table data
+    const data = [[0, "DCRNN", 8, 0.987501, 0.002897], [1, "DyGrEncoder", 8, 0.987709, 0.007733], [2, "EvolveGCNH", 8, 0.985664, 0.002148], [3, "EvolveGCNO", 8, 0.983264, 0.00136], [4, "GCLSTM", 8, 0.992238, 0.010079], [5, "GConvGRU", 8, 1.003295, 0.004157], [6, "GConvLSTM", 8, 1.018837, 0.044596], [7, "GNAR", 8, 1.64923, 0.0], [8, "LRGCN", 8, 0.987435, 0.006256], [9, "TGCN", 8, 0.990842, 0.009729]];
+
+    // Define the dt_args
+    let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
+    dt_args["data"] = data;
+
+    let table = new DataTable('#5983e203-f28d-43db-ab7b-6acfdd13f6aa', dt_args);
+</script>
+</div>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-16-2"><div class="card-body html-fill-item html-fill-container" data-title="Random Missing Data">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<style>.itables table td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables table th {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables thead input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.itables tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+</style>
+<div class="itables html-fill-item html-fill-container">
+
+<table id="dae04075-feee-4427-9d2b-25f56574ca3f" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">mrate</th>
+<th data-quarto-table-cell-role="th">lags</th>
+<th data-quarto-table-cell-role="th">inter_method</th>
+<th data-quarto-table-cell-role="th">method</th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">std</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="module">
+
+    // Define the table data
+    const data = [[0, "DCRNN", 0.7, 8, "linear", "IT-STGCN", 1.116619, 0.034324], [1, "DCRNN", 0.7, 8, "linear", "STGCN", 1.347718, 0.057066], [2, "DyGrEncoder", 0.7, 8, "linear", "IT-STGCN", 1.126743, 0.008989], [3, "DyGrEncoder", 0.7, 8, "linear", "STGCN", 1.708863, 0.073509], [4, "EvolveGCNH", 0.7, 8, "linear", "IT-STGCN", 1.129191, 0.035438], [5, "EvolveGCNH", 0.7, 8, "linear", "STGCN", 1.33013, 0.137209], [6, "EvolveGCNO", 0.7, 8, "linear", "IT-STGCN", 1.149027, 0.026005], [7, "EvolveGCNO", 0.7, 8, "linear", "STGCN", 1.49453, 0.137382], [8, "GCLSTM", 0.7, 8, "linear", "IT-STGCN", 1.116429, 0.020855], [9, "GCLSTM", 0.7, 8, "linear", "STGCN", 1.5733, 0.105141], [10, "GConvGRU", 0.7, 8, "linear", "IT-STGCN", 1.193886, 0.042126], [11, "GConvGRU", 0.7, 8, "linear", "STGCN", 1.661889, 0.073176], [12, "GConvLSTM", 0.7, 8, "linear", "IT-STGCN", 1.141815, 0.020918], [13, "GConvLSTM", 0.7, 8, "linear", "STGCN", 1.599078, 0.056654], [14, "GNAR", 0.7, 8, "nearest", "GNAR", 1.64923, 0.0], [15, "LRGCN", 0.7, 8, "linear", "IT-STGCN", 1.110096, 0.011968], [16, "LRGCN", 0.7, 8, "linear", "STGCN", 1.491797, 0.086602], [17, "TGCN", 0.7, 8, "linear", "IT-STGCN", 1.071404, 0.009862], [18, "TGCN", 0.7, 8, "linear", "STGCN", 1.304998, 0.038978]];
+
+    // Define the dt_args
+    let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
+    dt_args["data"] = data;
+
+    let table = new DataTable('#dae04075-feee-4427-9d2b-25f56574ca3f', dt_args);
+</script>
+</div>
+</div>
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-17"><li class="nav-item" role="presentation"><a href="#card-tabset-17-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Block Missing Data" aria-selected="true" class="nav-link active">Block Missing Data</a></li></ul></div>
+
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-17"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-17-1"><div class="card-body html-fill-item html-fill-container" data-title="Block Missing Data">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<style>.itables table td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables table th {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables thead input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.itables tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+</style>
+<div class="itables html-fill-item html-fill-container">
+
+<table id="bc6e5683-8970-4aeb-bf88-228cc8e8882c" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">mrate</th>
+<th data-quarto-table-cell-role="th">nof_filters</th>
+<th data-quarto-table-cell-role="th">lags</th>
+<th data-quarto-table-cell-role="th">method</th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">std</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="module">
+
+    // Define the table data
+    const data = [[0, "DCRNN", 0.081291, 4.0, 8, "IT-STGCN", 0.98336, 0.001726], [1, "DCRNN", 0.081291, 4.0, 8, "STGCN", 0.994235, 0.005431], [2, "DyGrEncoder", 0.081291, 12.0, 8, "IT-STGCN", 0.985058, 0.00459], [3, "DyGrEncoder", 0.081291, 12.0, 8, "STGCN", 0.984676, 0.002509], [4, "EvolveGCNH", 0.081291, 12.0, 8, "IT-STGCN", 0.985979, 0.002597], [5, "EvolveGCNH", 0.081291, 12.0, 8, "STGCN", 0.993039, 0.002979], [6, "EvolveGCNO", 0.081291, 12.0, 8, "IT-STGCN", 0.983069, 0.00166], [7, "EvolveGCNO", 0.081291, 12.0, 8, "STGCN", 0.989755, 0.002321], [8, "GCLSTM", 0.081291, 16.0, 8, "IT-STGCN", 0.985075, 0.002876], [9, "GCLSTM", 0.081291, 16.0, 8, "STGCN", 0.984761, 0.00208], [10, "GConvGRU", 0.081291, 12.0, 8, "IT-STGCN", 1.006659, 0.004919], [11, "GConvGRU", 0.081291, 12.0, 8, "STGCN", 1.008206, 0.00588], [12, "GConvLSTM", 0.081291, 16.0, 8, "IT-STGCN", 0.996949, 0.021902], [13, "GConvLSTM", 0.081291, 16.0, 8, "STGCN", 0.988787, 0.009287], [14, "LRGCN", 0.081291, 12.0, 8, "IT-STGCN", 0.98461, 0.002462], [15, "LRGCN", 0.081291, 12.0, 8, "STGCN", 0.984541, 0.002539], [16, "TGCN", 0.081291, 12.0, 8, "IT-STGCN", 0.992171, 0.015113], [17, "TGCN", 0.081291, 12.0, 8, "STGCN", 0.999012, 0.013028]];
+
+    // Define the dt_args
+    let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
+    dt_args["data"] = data;
+
+    let table = new DataTable('#bc6e5683-8970-4aeb-bf88-228cc8e8882c', dt_args);
+</script>
+</div>
+</div>
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" data-width="50%" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-18"></ul></div>
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-18"></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+<div id="montevideobus" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-montevideobus">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr) minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" data-width="50%" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-19"><li class="nav-item" role="presentation"><a href="#card-tabset-19-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Baseline Data" aria-selected="true" class="nav-link active">Baseline Data</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-19-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Random Missing Data" aria-selected="false" class="nav-link">Random Missing Data</a></li></ul></div>
+
+
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-19"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-19-1"><div class="card-body html-fill-item html-fill-container" data-title="Baseline Data">
+<div class="cell-output cell-output-error html-fill-item html-fill-container">
+<pre><code>TypeError: object of type 'NoneType' has no len()</code></pre>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-19-2"><div class="card-body html-fill-item html-fill-container" data-title="Random Missing Data">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<style>.itables table td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables table th {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables thead input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.itables tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+</style>
+<div class="itables html-fill-item html-fill-container">
+
+<table id="21eeb65c-082c-4196-ba78-4f1348eda3dd" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">mrate</th>
+<th data-quarto-table-cell-role="th">nof_filters</th>
+<th data-quarto-table-cell-role="th">lags</th>
+<th data-quarto-table-cell-role="th">inter_method</th>
+<th data-quarto-table-cell-role="th">method</th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">std</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -762,13 +1411,13 @@ grid-auto-rows: minmax(0, 1fr);">
 <script type="module">
 
     // Define the table data
-    const data = [[12, "DCRNN", 0.7, 2.0, "linear", "IT-STGCN", 2, 50.0, 1.247, 0.044], [13, "DCRNN", 0.7, 2.0, "linear", "STGCN", 2, 50.0, 1.271, 0.066], [32, "DyGrEncoder", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.252, 0.06], [33, "DyGrEncoder", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.548, 0.158], [52, "EvolveGCNH", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.188, 0.049], [53, "EvolveGCNH", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.228, 0.064], [72, "EvolveGCNO", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.162, 0.052], [73, "EvolveGCNO", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.198, 0.045], [92, "GCLSTM", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.228, 0.034], [93, "GCLSTM", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.245, 0.033], [112, "GConvGRU", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.18, 0.06], [113, "GConvGRU", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.858, 0.139], [132, "GConvLSTM", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.287, 0.075], [133, "GConvLSTM", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.472, 0.125], [152, "LRGCN", 0.7, 4.0, "linear", "IT-STGCN", 2, 50.0, 1.244, 0.041], [153, "LRGCN", 0.7, 4.0, "linear", "STGCN", 2, 50.0, 1.261, 0.047], [172, "TGCN", 0.7, 12.0, "linear", "IT-STGCN", 2, 50.0, 1.11, 0.037], [173, "TGCN", 0.7, 12.0, "linear", "STGCN", 2, 50.0, 1.184, 0.057]];
+    const data = [[0, "DCRNN", 0.3, 12.0, 4, "nearest", "IT-STGCN", 0.937868, 0.001369], [1, "DCRNN", 0.3, 12.0, 4, "nearest", "STGCN", 1.007506, 0.005817], [2, "DCRNN", 0.5, 12.0, 4, "nearest", "IT-STGCN", 0.947735, 0.00221], [3, "DCRNN", 0.5, 12.0, 4, "nearest", "STGCN", 1.119226, 0.024755], [4, "DCRNN", 0.7, 12.0, 4, "nearest", "IT-STGCN", 1.030943, 0.01753], [5, "DCRNN", 0.7, 12.0, 4, "nearest", "STGCN", 1.214012, 0.033267], [6, "DCRNN", 0.8, 12.0, 4, "nearest", "IT-STGCN", 1.11106, 0.036307], [7, "DCRNN", 0.8, 12.0, 4, "nearest", "STGCN", 1.225077, 0.072743], [8, "DyGrEncoder", 0.3, 12.0, 4, "nearest", "IT-STGCN", 1.026822, 0.058198], [9, "DyGrEncoder", 0.3, 12.0, 4, "nearest", "STGCN", 1.17329, 0.10807], [10, "DyGrEncoder", 0.5, 12.0, 4, "nearest", "IT-STGCN", 1.080011, 0.068523], [11, "DyGrEncoder", 0.5, 12.0, 4, "nearest", "STGCN", 1.285871, 0.139744], [12, "DyGrEncoder", 0.7, 12.0, 4, "nearest", "IT-STGCN", 1.197729, 0.087667], [13, "DyGrEncoder", 0.7, 12.0, 4, "nearest", "STGCN", 1.46742, 0.228006], [14, "DyGrEncoder", 0.8, 12.0, 4, "nearest", "IT-STGCN", 1.215692, 0.117963], [15, "DyGrEncoder", 0.8, 12.0, 4, "nearest", "STGCN", 1.357897, 0.14874], [16, "EvolveGCNH", 0.3, 12.0, 4, "nearest", "IT-STGCN", 1.398504, 0.135477], [17, "EvolveGCNH", 0.3, 12.0, 4, "nearest", "STGCN", 1.563461, 0.1342], [18, "EvolveGCNH", 0.5, 12.0, 4, "nearest", "IT-STGCN", 1.441138, 0.110318], [19, "EvolveGCNH", 0.5, 12.0, 4, "nearest", "STGCN", 1.730591, 0.311464], [20, "EvolveGCNH", 0.7, 12.0, 4, "nearest", "IT-STGCN", 1.70029, 0.328235], [21, "EvolveGCNH", 0.7, 12.0, 4, "nearest", "STGCN", 2.11839, 0.528367], [22, "EvolveGCNH", 0.8, 12.0, 4, "nearest", "IT-STGCN", 1.845349, 0.504113], [23, "EvolveGCNH", 0.8, 12.0, 4, "nearest", "STGCN", 2.158357, 0.545361], [24, "EvolveGCNO", 0.3, 12.0, 4, "nearest", "IT-STGCN", 1.401606, 0.147293], [25, "EvolveGCNO", 0.3, 12.0, 4, "nearest", "STGCN", 1.634467, 0.161082], [26, "EvolveGCNO", 0.5, 12.0, 4, "nearest", "IT-STGCN", 1.45794, 0.093312], [27, "EvolveGCNO", 0.5, 12.0, 4, "nearest", "STGCN", 1.928135, 0.303906], [28, "EvolveGCNO", 0.7, 12.0, 4, "nearest", "IT-STGCN", 1.968742, 0.235623], [29, "EvolveGCNO", 0.7, 12.0, 4, "nearest", "STGCN", 2.447478, 0.499375], [30, "EvolveGCNO", 0.8, 12.0, 4, "nearest", "IT-STGCN", 2.263371, 0.47641], [31, "EvolveGCNO", 0.8, 12.0, 4, "nearest", "STGCN", 2.622998, 0.693321], [32, "GCLSTM", 0.3, 12.0, 4, "nearest", "IT-STGCN", 0.967872, 0.013097], [33, "GCLSTM", 0.3, 12.0, 4, "nearest", "STGCN", 1.003208, 0.015793], [34, "GCLSTM", 0.5, 12.0, 4, "nearest", "IT-STGCN", 0.957196, 0.007978], [35, "GCLSTM", 0.5, 12.0, 4, "nearest", "STGCN", 1.073524, 0.040218], [36, "GCLSTM", 0.7, 12.0, 4, "nearest", "IT-STGCN", 1.002196, 0.010628], [37, "GCLSTM", 0.7, 12.0, 4, "nearest", "STGCN", 1.108467, 0.075113], [38, "GCLSTM", 0.8, 12.0, 4, "nearest", "IT-STGCN", 1.031532, 0.028135], [39, "GCLSTM", 0.8, 12.0, 4, "nearest", "STGCN", 1.140193, 0.061301], [40, "GConvGRU", 0.3, 12.0, 4, "nearest", "IT-STGCN", 0.936185, 0.001825], [41, "GConvGRU", 0.3, 12.0, 4, "nearest", "STGCN", 0.99139, 0.007285], [42, "GConvGRU", 0.5, 12.0, 4, "nearest", "IT-STGCN", 0.942045, 0.002642], [43, "GConvGRU", 0.5, 12.0, 4, "nearest", "STGCN", 1.149221, 0.01782], [44, "GConvGRU", 0.7, 12.0, 4, "nearest", "IT-STGCN", 1.015221, 0.012403], [45, "GConvGRU", 0.7, 12.0, 4, "nearest", "STGCN", 1.393108, 0.027555], [46, "GConvGRU", 0.8, 12.0, 4, "nearest", "IT-STGCN", 1.09556, 0.018743], [47, "GConvGRU", 0.8, 12.0, 4, "nearest", "STGCN", 1.516, 0.039793], [48, "GConvLSTM", 0.3, 12.0, 4, "nearest", "IT-STGCN", 0.951211, 0.0086], [49, "GConvLSTM", 0.3, 12.0, 4, "nearest", "STGCN", 0.981229, 0.019621], [50, "GConvLSTM", 0.5, 12.0, 4, "nearest", "IT-STGCN", 0.946908, 0.006311], [51, "GConvLSTM", 0.5, 12.0, 4, "nearest", "STGCN", 1.054732, 0.029556], [52, "GConvLSTM", 0.7, 12.0, 4, "nearest", "IT-STGCN", 0.996737, 0.013387], [53, "GConvLSTM", 0.7, 12.0, 4, "nearest", "STGCN", 1.120663, 0.06491], [54, "GConvLSTM", 0.8, 12.0, 4, "nearest", "IT-STGCN", 1.156399, 0.061898], [55, "GConvLSTM", 0.8, 12.0, 4, "nearest", "STGCN", 1.133692, 0.06859], [56, "LRGCN", 0.3, 2.0, 4, "nearest", "IT-STGCN", 0.973762, 0.013469], [57, "LRGCN", 0.3, 2.0, 4, "nearest", "STGCN", 0.982182, 0.01916], [58, "LRGCN", 0.5, 2.0, 4, "nearest", "IT-STGCN", 0.984241, 0.022417], [59, "LRGCN", 0.5, 2.0, 4, "nearest", "STGCN", 0.977705, 0.021292], [60, "LRGCN", 0.7, 2.0, 4, "nearest", "IT-STGCN", 0.980846, 0.022604], [61, "LRGCN", 0.7, 2.0, 4, "nearest", "STGCN", 0.988757, 0.024863], [62, "LRGCN", 0.8, 2.0, 4, "nearest", "IT-STGCN", 0.982006, 0.013261], [63, "LRGCN", 0.8, 2.0, 4, "nearest", "STGCN", 0.989219, 0.028653], [64, "TGCN", 0.3, 8.0, 4, "nearest", "IT-STGCN", 0.987441, 0.007021], [65, "TGCN", 0.3, 8.0, 4, "nearest", "STGCN", 1.034595, 0.012626], [66, "TGCN", 0.5, 8.0, 4, "nearest", "IT-STGCN", 0.990051, 0.009426], [67, "TGCN", 0.5, 8.0, 4, "nearest", "STGCN", 1.099853, 0.036318], [68, "TGCN", 0.7, 8.0, 4, "nearest", "IT-STGCN", 1.029527, 0.009532], [69, "TGCN", 0.7, 8.0, 4, "nearest", "STGCN", 1.182811, 0.057392], [70, "TGCN", 0.8, 8.0, 4, "nearest", "IT-STGCN", 1.072795, 0.024438], [71, "TGCN", 0.8, 8.0, 4, "nearest", "STGCN", 1.217952, 0.085842]];
 
     // Define the dt_args
     let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
     dt_args["data"] = data;
 
-    let table = new DataTable('#f140cdef-18dc-4043-bf82-d2c3d94b1ade', dt_args);
+    let table = new DataTable('#21eeb65c-082c-4196-ba78-4f1348eda3dd', dt_args);
 </script>
 </div>
 </div>
@@ -780,13 +1429,94 @@ grid-auto-rows: minmax(0, 1fr);">
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-header dashboard-card-no-title bslib-navs-card-title">
 
-<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-14"></ul></div>
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-20"><li class="nav-item" role="presentation"><a href="#card-tabset-20-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Block Missing Data" aria-selected="true" class="nav-link active">Block Missing Data</a></li></ul></div>
+
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-20"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-20-1"><div class="card-body html-fill-item html-fill-container" data-title="Block Missing Data">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<style>.itables table td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables table th {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itables thead input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.itables tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+</style>
+<div class="itables html-fill-item html-fill-container">
+
+<table id="ed5a7ee0-5a28-4650-8c51-a4915ac1f0c5" class="display nowrap compact table" data-quarto-postprocess="true" style="width:100%;">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">mrate</th>
+<th data-quarto-table-cell-role="th">lags</th>
+<th data-quarto-table-cell-role="th">inter_method</th>
+<th data-quarto-table-cell-role="th">method</th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">std</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Loading... (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="module">
+
+    // Define the table data
+    const data = [[0, "DCRNN", 0.149142, 4, "nearest", "IT-STGCN", 0.940344, 0.001323], [1, "DCRNN", 0.149142, 4, "nearest", "STGCN", 0.955944, 0.00301], [2, "DyGrEncoder", 0.149142, 4, "nearest", "IT-STGCN", 1.005486, 0.046063], [3, "DyGrEncoder", 0.149142, 4, "nearest", "STGCN", 1.030326, 0.044023], [4, "EvolveGCNH", 0.149142, 4, "nearest", "IT-STGCN", 1.391881, 0.110351], [5, "EvolveGCNH", 0.149142, 4, "nearest", "STGCN", 1.612466, 0.216224], [6, "EvolveGCNO", 0.149142, 4, "nearest", "IT-STGCN", 1.345316, 0.110313], [7, "EvolveGCNO", 0.149142, 4, "nearest", "STGCN", 1.766133, 0.123163], [8, "GCLSTM", 0.149142, 4, "nearest", "IT-STGCN", 0.95862, 0.007766], [9, "GCLSTM", 0.149142, 4, "nearest", "STGCN", 0.955762, 0.005461], [14, "GConvGRU", 0.149142, 4, "nearest", "IT-STGCN", 0.931785, 0.002158], [15, "GConvGRU", 0.149142, 4, "nearest", "STGCN", 0.934596, 0.003562], [16, "GConvLSTM", 0.149142, 4, "nearest", "IT-STGCN", 0.949276, 0.007582], [17, "GConvLSTM", 0.149142, 4, "nearest", "STGCN", 0.949673, 0.005402], [18, "GNAR", 0.149142, 4, "nearest", "GNAR", 1.061937, 0.0], [19, "LRGCN", 0.149142, 4, "nearest", "IT-STGCN", 0.978381, 0.024324], [20, "LRGCN", 0.149142, 4, "nearest", "STGCN", 0.976996, 0.020351], [21, "TGCN", 0.149142, 4, "nearest", "IT-STGCN", 0.98364, 0.00655], [22, "TGCN", 0.149142, 4, "nearest", "STGCN", 0.985485, 0.005308]];
+
+    // Define the dt_args
+    let dt_args = {"autoWidth": false, "buttons": [], "dom": "fiBrtlp", "info": true, "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "lengthChange": false, "order": [], "ordering": true, "paging": false, "responsive": true, "searching": true};
+    dt_args["data"] = data;
+
+    let table = new DataTable('#ed5a7ee0-5a28-4650-8c51-a4915ac1f0c5', dt_args);
+</script>
+</div>
+</div>
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" data-width="50%" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-21"></ul></div>
 
 
 <div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
 
 </div>
-<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-14"></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-21"></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
     <span class="bslib-full-screen-enter badge rounded-pill">
         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
