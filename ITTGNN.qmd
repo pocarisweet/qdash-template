@@ -21,6 +21,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import itables 
 from plotnine import ggplot, aes, geom_boxplot, scale_fill_manual, theme, element_blank, element_text, labs, facet_wrap, scale_x_continuous
+import pickle
 
 # GConvGRU
 pedal_wiki_GSO_GConvGRU = pd.read_csv('./Data/Final_Simulation_GConvGRU_pedal_wiki_GSO.csv')
