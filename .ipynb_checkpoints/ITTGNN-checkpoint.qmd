@@ -97,8 +97,6 @@ itables.show(FiveVTS_random)
 
 ```
 
-### Row {.tabset}
-
 ```{python}
 #| title: Block Missing Data
 
@@ -150,8 +148,6 @@ Chickenpox_random = pd.merge(df.query("dataset=='chickenpox' and mtype=='rand'")
          on=['model','method','inter_method','mrate','nof_filters']).rename(columns={'mse_x':'mean','mse_y':'std'})
 itables.show(Chickenpox_random)
 ```
-
-### Row {.tabset}
 
 ```{python}
 #| title: Block Missing Data
@@ -206,8 +202,6 @@ itables.show(Pedalme_Random)
 
 ```
 
-### Row {.tabset}
-
 ```{python}
 #| title: Block Missing Data
 
@@ -258,8 +252,6 @@ Wikimath_random = pd.merge(df.query("dataset=='wikimath' and mtype=='rand'").gro
 
 itables.show(Wikimath_random)
 ```
-
-### Row {.tabset}
 
 ```{python}
 #| title: Block Missing Data
