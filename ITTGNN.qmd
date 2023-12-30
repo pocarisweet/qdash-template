@@ -235,9 +235,9 @@ pedalme_fig
 ```{python}
 #| title: Baseline Data
 
-Wikimath_baseline = pd.merge(df.query("dataset=='wikimath' and mrate==0").groupby(['model','lags','nof_filters','method'])['mse'].mean().reset_index(),
-         df.query("dataset=='wikimath' and mrate==0").groupby(['model','lags','nof_filters','method'])['mse'].std().reset_index(),
-         on=['model','lags','nof_filters','method']).rename(columns={'mse_x':'mean','mse_y':'std'})
+Wikimath_baseline = pd.merge(df.query("dataset=='wikimath' and mrate==0").groupby(['model','lags','nof_filters'])['mse'].mean().reset_index(),
+         df.query("dataset=='wikimath' and mrate==0").groupby(['model','lags','nof_filters'])['mse'].std().reset_index(),
+         on=['model','lags','nof_filters']).rename(columns={'mse_x':'mean','mse_y':'std'})
 
 itables.show(Wikimath_baseline)
 
@@ -248,7 +248,7 @@ itables.show(Wikimath_baseline)
 
 Wikimath_random = pd.merge(df.query("dataset=='wikimath' and mtype=='rand'").groupby(['model','mrate','lags','inter_method','method'])['mse'].mean().reset_index(),
          df.query("dataset=='wikimath' and mtype=='rand'").groupby(['model','mrate','lags','inter_method','method'])['mse'].std().reset_index(),
-         on=['model','method','mrate','inter_method','lags']).rename(columns={'mse_x':'mean','mse_y':'std'})
+         on=['model','mrate','inter_method','lags']).rename(columns={'mse_x':'mean','mse_y':'std'})
 
 itables.show(Wikimath_random)
 ```
