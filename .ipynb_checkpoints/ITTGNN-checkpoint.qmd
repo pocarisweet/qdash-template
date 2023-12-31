@@ -69,7 +69,7 @@ df2 = pd.concat([pedal_wiki_GSO_GConvGRU,pedal_wiki_GSO_GConvLSTM,pedal_wiki_GSO
 
 ```
 
-# FiveVTS
+# FiveVTS {orientation="columns" scrolling="true"}
 
 ## Column {width=50%}
 
@@ -83,7 +83,7 @@ FiveVTS_baseline = pd.merge(df.query("dataset=='fivenodes' and mtype!='rand' and
          df.query("dataset=='fivenodes' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters','lags','epoch'])['mse'].std().reset_index(),
          on=['model','nof_filters','lags','epoch']).rename(columns={'model':'Model','nof_filters':'Filters', 'mse_x':'mean','mse_y':'std'})
 
-itables.show(FiveVTS_baseline['이름', '나이', '직업'])
+itables.show(FiveVTS_baseline['Model', 'lags', 'Filters', 'mean', 'std'])
 
 ```
 
@@ -125,7 +125,7 @@ fivenodes_fig
 
 
 
-# Chickenpox
+# Chickenpox {orientation="columns" scrolling="true"}
 
 ## Column {width=50%}
 
@@ -179,7 +179,7 @@ chickenpox_fig
 
 
 
-# Pedalme
+# Pedalme {orientation="columns" scrolling="true"}
 
 ## Column {width=50%}
 
@@ -231,7 +231,7 @@ pedalme_fig
 ```
 
 
-# Wikimath
+# Wikimath {orientation="columns" scrolling="true"}
 
 ## Column {width=50%}
 
@@ -283,7 +283,7 @@ wikimath_fig
 ```
 
 
-# Windmillsmall
+# Windmillsmall {orientation="columns" scrolling="true"}
 
 ## Column {width=50%}
 
@@ -336,7 +336,7 @@ windmillsmall_fig
 ```
 
 
-# MontevideoBus
+# MontevideoBus {orientation="columns" scrolling="true"}
 
 ## Column {width=50%}
 
