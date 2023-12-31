@@ -81,9 +81,9 @@ df2 = pd.concat([pedal_wiki_GSO_GConvGRU,pedal_wiki_GSO_GConvLSTM,pedal_wiki_GSO
 
 FiveVTS_baseline = pd.merge(df.query("dataset=='fivenodes' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters','lags','epoch'])['mse'].mean().reset_index(),
          df.query("dataset=='fivenodes' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters','lags','epoch'])['mse'].std().reset_index(),
-         on=['model','nof_filters','lags','epoch']).rename(columns={'mse_x':'mean','mse_y':'std'})
+         on=['model','nof_filters','lags','epoch']).rename(columns={'model':'Model','nof_filters':'Filters', 'mse_x':'mean','mse_y':'std'})
 
-itables.show(FiveVTS_baseline)
+itables.show(FiveVTS_baseline['이름', '나이', '직업'])
 
 ```
 
@@ -108,6 +108,8 @@ itables.show(FiveVTS_block)
 ```
 
 ## Column {width=50%}
+
+### Row
 
 ```{python}
 #| title: Random Missing Figure
@@ -162,6 +164,8 @@ itables.show(Chickenpox_block)
 
 ## Column {width=50%}
 
+### Row
+
 ```{python}
 #| title: Random Missing Figure
 
@@ -214,6 +218,7 @@ itables.show(Pedalme_block)
 
 ## Column {width=50%}
 
+### Row
 
 ```{python}
 #| title: Random Missing Figure
@@ -265,6 +270,8 @@ itables.show(Wikimath_block)
 
 ## Column {width=50%}
 
+### Row
+
 ```{python}
 #| title: Random Missing Figure
 
@@ -315,6 +322,7 @@ itables.show(Windmillsmall_block)
 
 ## Column {width=50%}
 
+### Row
 
 ```{python}
 #| title: Random Missing Figure
@@ -367,6 +375,8 @@ itables.show(MontevideoBus_block)
 
 
 ## Column {width=50%}
+
+### Row
 
 ```{python}
 #| title: Random Missing Figure
