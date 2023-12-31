@@ -83,7 +83,7 @@ FiveVTS_baseline = pd.merge(df.query("dataset=='fivenodes' and mtype!='rand' and
          df.query("dataset=='fivenodes' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters','lags','epoch'])['mse'].std().reset_index(),
          on=['model','nof_filters','lags','epoch']).rename(columns={'model':'Model','nof_filters':'Filters', 'mse_x':'mean','mse_y':'std'})
 
-itables.show(FiveVTS_baseline['Model', 'lags', 'Filters', 'mean', 'std'])
+itables.show(FiveVTS_baseline)
 
 ```
 
