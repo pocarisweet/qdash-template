@@ -132,8 +132,8 @@ fivenodes_fig
 ```{python}
 #| title: Baseline Data
 
-Chickenpox_baseline = pd.merge(df.query("dataset=='chickenpox' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters'])['mse'].mean().reset_index(),
-         df.query("dataset=='chickenpox' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters'])['mse'].std().reset_index(),
+Chickenpox_baseline = pd.merge(df.query("dataset=='chickenpox' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters','lags'])['mse'].mean().reset_index(),
+         df.query("dataset=='chickenpox' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters','lags'])['mse'].std().reset_index(),
          on=['model','nof_filters']).rename(columns={'mse_x':'mean','mse_y':'std'})
 itables.show(Chickenpox_baseline)
          
@@ -143,8 +143,8 @@ itables.show(Chickenpox_baseline)
 ```{python}
 #| title: Random Missing Data
 
-Chickenpox_random = pd.merge(df.query("dataset=='chickenpox' and mtype=='rand'").groupby(['model','mrate','inter_method','nof_filters','method'])['mse'].mean().reset_index(),
-         df.query("dataset=='chickenpox' and mtype=='rand'").groupby(['model','mrate','inter_method','nof_filters','method'])['mse'].std().reset_index(),
+Chickenpox_random = pd.merge(df.query("dataset=='chickenpox' and mtype=='rand'").groupby(['model','mrate','inter_method','nof_filters','method','lags'])['mse'].mean().reset_index(),
+         df.query("dataset=='chickenpox' and mtype=='rand'").groupby(['model','mrate','inter_method','nof_filters','method','lags'])['mse'].std().reset_index(),
          on=['model','method','inter_method','mrate','nof_filters']).rename(columns={'mse_x':'mean','mse_y':'std'})
 itables.show(Chickenpox_random)
 ```
@@ -152,8 +152,8 @@ itables.show(Chickenpox_random)
 ```{python}
 #| title: Block Missing Data
 
-Chickenpox_block = pd.merge(df.query("dataset=='chickenpox' and mtype=='block'").groupby(['model','inter_method','mrate','nof_filters','method'])['mse'].mean().reset_index(),
-         df.query("dataset=='chickenpox' and mtype=='block'").groupby(['model','inter_method','mrate','nof_filters','method'])['mse'].std().reset_index(),
+Chickenpox_block = pd.merge(df.query("dataset=='chickenpox' and mtype=='block'").groupby(['model','inter_method','mrate','nof_filters','method','lags'])['mse'].mean().reset_index(),
+         df.query("dataset=='chickenpox' and mtype=='block'").groupby(['model','inter_method','mrate','nof_filters','method','lags'])['mse'].std().reset_index(),
          on=['model','method','inter_method','mrate','nof_filters']).rename(columns={'mse_x':'mean','mse_y':'std'}).query("inter_method=='linear'")
 itables.show(Chickenpox_block)
 
