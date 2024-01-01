@@ -97,17 +97,6 @@ itables.show(FiveVTS_random)
 
 
 ```{python}
-#| title: Random Missing Figure
-
-with open('Fig/fivenodes_fig.pkl', 'rb') as file:
-    fivenodes_fig = pickle.load(file)
-
-fivenodes_fig.show()
-
-```
-
-
-```{python}
 #| title: Block Missing Data
 
 FiveVTS_block = pd.merge(df.query("dataset=='fivenodes' and mtype=='block'").groupby(['model','mrate','nof_filters','inter_method','method','epoch'])['mse'].mean().reset_index(),
@@ -140,17 +129,6 @@ Chickenpox_random = pd.merge(df.query("dataset=='chickenpox' and mtype=='rand'")
          df.query("dataset=='chickenpox' and mtype=='rand'").groupby(['model','mrate','inter_method','nof_filters','method','lags'])['mse'].std().reset_index(),
          on=['model','method','inter_method','mrate','nof_filters']).rename(columns={'mse_x':'mean','mse_y':'std'})
 itables.show(Chickenpox_random)
-```
-
-
-```{python}
-#| title: Random Missing Figure
-
-with open('Fig/chickenpox_fig.pkl', 'rb') as file:
-    chickenpox_fig = pickle.load(file)
-
-chickenpox_fig.show()
-
 ```
 
 ```{python}
@@ -192,15 +170,6 @@ itables.show(Pedalme_Random)
 ```
 
 
-```{python}
-#| title: Random Missing Figure
-
-with open('Fig/pedalme_fig.pkl', 'rb') as file:
-    pedalme_fig = pickle.load(file)
-
-pedalme_fig.show()
-
-```
 
 ```{python}
 #| title: Block Missing Data
@@ -240,15 +209,6 @@ itables.show(Wikimath_random)
 ```
 
 
-```{python}
-#| title: Random Missing Figure
-
-with open('Fig/wikimath_fig.pkl', 'rb') as file:
-    wikimath_fig = pickle.load(file)
-
-wikimath_fig.show()
-
-```
 
 ```{python}
 #| title: Block Missing Data
@@ -288,20 +248,6 @@ itables.show(Windmillsmall_random)
 ```
 
 
-
-```{python}
-#| title: Random Missing Figure
-
-with open('Fig/windmillsmall_fig.pkl', 'rb') as file:
-    windmillsmall_fig = pickle.load(file)
-
-windmillsmall_fig.show()
-
-
-```
-
-
-
 ```{python}
 #| title: Block Missing Data
 
@@ -338,16 +284,6 @@ itables.show(MontevideoBus_random)
 ```
 
 
-```{python}
-#| title: Random Missing Figure
-
-with open('Fig/monte_fig.pkl', 'rb') as file:
-    monte_fig = pickle.load(file)
-
-monte_fig.show()
-
-
-```
 
 ```{python}
 
@@ -362,3 +298,77 @@ itables.show(MontevideoBus_block)
 
 
 
+# Random Missing Figure
+
+## Raw (.tabset}
+
+
+```{python}
+#| title: FiveVTS
+
+with open('Fig/fivenodes_fig.pkl', 'rb') as file:
+    fivenodes_fig = pickle.load(file)
+
+fivenodes_fig.show()
+
+```
+
+
+```{python}
+#| title: Chickenpox
+
+with open('Fig/chickenpox_fig.pkl', 'rb') as file:
+    chickenpox_fig = pickle.load(file)
+
+chickenpox_fig.show()
+
+```
+
+
+```{python}
+#| title: Pedalme
+
+with open('Fig/pedalme_fig.pkl', 'rb') as file:
+    pedalme_fig = pickle.load(file)
+
+pedalme_fig.show()
+
+```
+
+
+```{python}
+#| title: Wikimath
+
+with open('Fig/wikimath_fig.pkl', 'rb') as file:
+    wikimath_fig = pickle.load(file)
+
+wikimath_fig.show()
+
+```
+
+
+
+
+```{python}
+#| title: Windmillsmall
+
+with open('Fig/windmillsmall_fig.pkl', 'rb') as file:
+    windmillsmall_fig = pickle.load(file)
+
+windmillsmall_fig.show()
+
+
+```
+
+
+
+```{python}
+#| title: MontevideoBus
+
+with open('Fig/monte_fig.pkl', 'rb') as file:
+    monte_fig = pickle.load(file)
+
+monte_fig.show()
+
+
+```
