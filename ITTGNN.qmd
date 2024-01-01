@@ -117,7 +117,7 @@ itables.show(FiveVTS_block)
 with open('Fig/fivenodes_fig.pkl', 'rb') as file:
     fivenodes_fig = pickle.load(file)
 
-fivenodes_fig
+fivenodes_fig.show()
 
 ```
 
@@ -172,7 +172,7 @@ itables.show(Chickenpox_block)
 with open('Fig/chickenpox_fig.pkl', 'rb') as file:
     chickenpox_fig = pickle.load(file)
 
-chickenpox_fig
+chickenpox_fig.show()
 
 ```
 
@@ -226,7 +226,7 @@ itables.show(Pedalme_block)
 with open('Fig/pedalme_fig.pkl', 'rb') as file:
     pedalme_fig = pickle.load(file)
 
-pedalme_fig
+pedalme_fig.show()
 
 ```
 
@@ -278,7 +278,7 @@ itables.show(Wikimath_block)
 with open('Fig/wikimath_fig.pkl', 'rb') as file:
     wikimath_fig = pickle.load(file)
 
-wikimath_fig
+wikimath_fig.show()
 
 ```
 
@@ -330,7 +330,7 @@ itables.show(Windmillsmall_block)
 with open('Fig/windmillsmall_fig.pkl', 'rb') as file:
     windmillsmall_fig = pickle.load(file)
 
-windmillsmall_fig
+windmillsmall_fig.show()
 
 
 ```
@@ -384,7 +384,7 @@ itables.show(MontevideoBus_block)
 with open('Fig/monte_fig.pkl', 'rb') as file:
     monte_fig = pickle.load(file)
 
-monte_fig
+monte_fig.show()
 
 
 ```
