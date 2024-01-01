@@ -376,8 +376,6 @@ itables.show(MontevideoBus_block)
 
 ## Column {width=50%}
 
-### Row
-
 ```{python}
 #| title: Random Missing Figure
 
