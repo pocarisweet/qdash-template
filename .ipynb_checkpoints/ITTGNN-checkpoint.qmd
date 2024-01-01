@@ -1,5 +1,5 @@
 ---
-title: "Iterative Temporal Graph Neural Network extension"
+title: "Analysis Result of ITTGNN"
 author: "SEOYEON CHOI"
 format: 
     dashboard:
