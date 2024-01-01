@@ -298,10 +298,10 @@ itables.show(MontevideoBus_block)
 
 
 
-# Random Missing Figure
+# Random Missing Figure {orientation="columns" scrolling="true"}
 
-## Raw (.tabset}
 
+## Row {.tabset}
 
 ```{python}
 #| title: FiveVTS
@@ -312,7 +312,6 @@ with open('Fig/fivenodes_fig.pkl', 'rb') as file:
 fivenodes_fig.show()
 
 ```
-
 
 ```{python}
 #| title: Chickenpox
