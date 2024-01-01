@@ -300,7 +300,6 @@ itables.show(MontevideoBus_block)
 
 # Random Missing Figure {orientation="columns" scrolling="true"}
 
-
 ## Row {.tabset}
 
 ```{python}
