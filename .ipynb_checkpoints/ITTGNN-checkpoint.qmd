@@ -90,7 +90,7 @@ itables.show(FiveVTS_baseline)
 
 FiveVTS_random = pd.merge(df.query("dataset=='fivenodes' and mtype=='rand'").groupby(['model','mrate','nof_filters','inter_method','method','lags','epoch'])['mse'].mean().reset_index(),
          df.query("dataset=='fivenodes' and mtype=='rand'").groupby(['model','mrate','nof_filters','inter_method','method','lags','epoch'])['mse'].std().reset_index(),
-         on=['model','inter_method','method','nof_filters','mrate','lags','epoch']).rename(columns={'mse_x':'mean','mse_y':'std','mrate'='Missing Rate'}).query("mrate==0.7 and inter_method=='linear'").assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','inter_method','method','nof_filters','mrate','lags','epoch']).rename(columns={'mse_x':'mean','mse_y':'std','mrate':'Missing Rate'}).query("mrate==0.7 and inter_method=='linear'").assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 itables.show(FiveVTS_random)
 
 ```
@@ -101,7 +101,7 @@ itables.show(FiveVTS_random)
 
 FiveVTS_block = pd.merge(df.query("dataset=='fivenodes' and mtype=='block'").groupby(['model','mrate','nof_filters','inter_method','method','epoch'])['mse'].mean().reset_index(),
          df.query("dataset=='fivenodes' and mtype=='block'").groupby(['model','mrate','nof_filters','inter_method','method','epoch'])['mse'].std().reset_index(),
-         on=['model','inter_method','method','nof_filters','mrate','epoch']).rename(columns={'mse_x':'mean','mse_y':'std','mrate'='Missing Rate'}).query("inter_method=='linear'").assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','inter_method','method','nof_filters','mrate','epoch']).rename(columns={'mse_x':'mean','mse_y':'std','mrate':'Missing Rate'}).query("inter_method=='linear'").assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 itables.show(FiveVTS_block)
 
 ```
@@ -127,7 +127,7 @@ itables.show(Chickenpox_baseline)
 
 Chickenpox_random = pd.merge(df.query("dataset=='chickenpox' and mtype=='rand'").groupby(['model','mrate','inter_method','nof_filters','method','lags'])['mse'].mean().reset_index(),
          df.query("dataset=='chickenpox' and mtype=='rand'").groupby(['model','mrate','inter_method','nof_filters','method','lags'])['mse'].std().reset_index(),
-         on=['model','method','inter_method','mrate','nof_filters']).rename(columns={'mse_x':'mean','mse_y':'std','mrate'='Missing Rate'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','method','inter_method','mrate','nof_filters']).rename(columns={'mse_x':'mean','mse_y':'std','mrate':'Missing Rate'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 itables.show(Chickenpox_random)
 ```
 
@@ -136,7 +136,7 @@ itables.show(Chickenpox_random)
 
 Chickenpox_block = pd.merge(df.query("dataset=='chickenpox' and mtype=='block'").groupby(['model','inter_method','mrate','nof_filters','method','lags'])['mse'].mean().reset_index(),
          df.query("dataset=='chickenpox' and mtype=='block'").groupby(['model','inter_method','mrate','nof_filters','method','lags'])['mse'].std().reset_index(),
-         on=['model','method','inter_method','mrate','nof_filters']).rename(columns={'mse_x':'mean','mse_y':'std','mrate'='Missing Rate'}).query("inter_method=='linear'").assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','method','inter_method','mrate','nof_filters']).rename(columns={'mse_x':'mean','mse_y':'std','mrate':'Missing Rate'}).query("inter_method=='linear'").assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 itables.show(Chickenpox_block)
 
 
@@ -164,7 +164,7 @@ itables.show(Pedalme_baseline)
 
 Pedalme_Random = pd.merge(df.query("dataset=='pedalme' and mtype=='rand'").groupby(['model','mrate','lags','inter_method','method'])['mse'].mean().reset_index(),
          df.query("dataset=='pedalme' and mtype=='rand'").groupby(['model','mrate','lags','inter_method','method'])['mse'].std().reset_index(),
-         on=['model','method','mrate','lags','inter_method']).rename(columns={'mse_x':'mean','mse_y':'std','mrate'='Missing Rate'}).query("inter_method=='nearest'").assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','method','mrate','lags','inter_method']).rename(columns={'mse_x':'mean','mse_y':'std','mrate':'Missing Rate'}).query("inter_method=='nearest'").assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 itables.show(Pedalme_Random)
 
 ```
@@ -176,7 +176,7 @@ itables.show(Pedalme_Random)
 
 Pedalme_block = pd.merge(df.query("dataset=='pedalme' and mtype=='block'").groupby(['model','mrate','lags','inter_method','method'])['mse'].mean().reset_index(),
          df.query("dataset=='pedalme' and mtype=='block'").groupby(['model','mrate','lags','inter_method','method'])['mse'].std().reset_index(),
-         on=['model','method','mrate','lags','inter_method']).rename(columns={'mse_x':'mean','mse_y':'std','mrate'='Missing Rate'}).query("lags==4 and inter_method=='nearest'").assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','method','mrate','lags','inter_method']).rename(columns={'mse_x':'mean','mse_y':'std','mrate':'Missing Rate'}).query("lags==4 and inter_method=='nearest'").assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 itables.show(Pedalme_block)
 
 ```
@@ -203,7 +203,7 @@ itables.show(Wikimath_baseline)
 
 Wikimath_random = pd.merge(df.query("dataset=='wikimath' and mtype=='rand'").groupby(['model','mrate','lags','inter_method','method'])['mse'].mean().reset_index(),
          df.query("dataset=='wikimath' and mtype=='rand'").groupby(['model','mrate','lags','inter_method','method'])['mse'].std().reset_index(),
-         on=['model','method','mrate','inter_method','lags']).rename(columns={'mse_x':'mean','mse_y':'std','mrate'='Missing Rate'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','method','mrate','inter_method','lags']).rename(columns={'mse_x':'mean','mse_y':'std','mrate':'Missing Rate'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 
 itables.show(Wikimath_random)
 ```
@@ -215,7 +215,7 @@ itables.show(Wikimath_random)
 
 Wikimath_block = pd.merge(df.query("dataset=='wikimath' and mtype=='block'").groupby(['model','mrate','lags','inter_method','method'])['mse'].mean().reset_index(),
          df.query("dataset=='wikimath' and mtype=='block'").groupby(['model','mrate','lags','inter_method','method'])['mse'].std().reset_index(),
-         on=['model','method','mrate','inter_method','lags']).rename(columns={'mse_x':'mean','mse_y':'std','mrate'='Missing Rate'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','method','mrate','inter_method','lags']).rename(columns={'mse_x':'mean','mse_y':'std','mrate':'Missing Rate'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 itables.show(Wikimath_block)
 
 ```
@@ -242,7 +242,7 @@ itables.show(Windmillsmall_baseline)
 
 Windmillsmall_random = pd.merge(df.query("dataset=='windmillsmall' and mtype=='rand'").groupby(['model','mrate','lags','inter_method','method'])['mse'].mean().reset_index(),
          df.query("dataset=='windmillsmall' and mtype=='rand'").groupby(['model','mrate','lags','inter_method','method'])['mse'].std().reset_index(),
-         on=['model','method','mrate','inter_method','lags']).rename(columns={'mse_x':'mean','mse_y':'std','mrate'='Missing Rate'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','method','mrate','inter_method','lags']).rename(columns={'mse_x':'mean','mse_y':'std','mrate':'Missing Rate'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 
 itables.show(Windmillsmall_random)
 ```
@@ -253,7 +253,7 @@ itables.show(Windmillsmall_random)
 
 Windmillsmall_block = pd.merge(df.query("dataset=='windmillsmall' and mtype=='block'").groupby(['model','mrate','nof_filters','lags','method'])['mse'].mean().reset_index(),
          df.query("dataset=='windmillsmall' and mtype=='block'").groupby(['model','mrate','nof_filters','lags','method'])['mse'].std().reset_index(),
-         on=['model','method','nof_filters','mrate','lags']).rename(columns={'mse_x':'mean','mse_y':'std','mrate'='Missing Rate'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','method','nof_filters','mrate','lags']).rename(columns={'mse_x':'mean','mse_y':'std','mrate':'Missing Rate'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 
 itables.show(Windmillsmall_block)
 ```
@@ -278,7 +278,7 @@ itables.show(MontevideoBus_baseline)
 
 MontevideoBus_random = pd.merge(df.query("dataset=='monte' and mtype=='rand'").groupby(['model','mrate','nof_filters','lags','inter_method','method'])['mse'].mean().reset_index(),
          df.query("dataset=='monte' and mtype=='rand'").groupby(['model','mrate','nof_filters','lags','inter_method','method'])['mse'].std().reset_index(),
-         on=['model','mrate','nof_filters','inter_method','method','mrate','lags']).rename(columns={'mse_x':'mean','mse_y':'std','mrate'='Missing Rate'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','mrate','nof_filters','inter_method','method','mrate','lags']).rename(columns={'mse_x':'mean','mse_y':'std','mrate':'Missing Rate'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 
 itables.show(MontevideoBus_random)
 ```
@@ -291,7 +291,7 @@ itables.show(MontevideoBus_random)
 
 MontevideoBus_block = pd.merge(df.query("dataset=='monte' and mtype=='block'").groupby(['model','mrate','lags','inter_method','method'])['mse'].mean().reset_index(),
          df.query("dataset=='monte' and mtype=='block'").groupby(['model','mrate','lags','inter_method','method'])['mse'].std().reset_index(),
-         on=['model','method','mrate','inter_method','lags']).rename(columns={'mse_x':'mean','mse_y':'std','mrate'='Missing Rate'}).query("inter_method=='nearest'").assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','method','mrate','inter_method','lags']).rename(columns={'mse_x':'mean','mse_y':'std','mrate':'Missing Rate'}).query("inter_method=='nearest'").assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 
 itables.show(MontevideoBus_block)
 ```
