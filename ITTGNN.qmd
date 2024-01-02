@@ -90,7 +90,7 @@ itables.show(FiveVTS_baseline)
 
 FiveVTS_random = pd.merge(df.query("dataset=='fivenodes' and mtype=='rand'").groupby(['model','mrate','nof_filters','inter_method','method','lags','epoch'])['mse'].mean().reset_index(),
          df.query("dataset=='fivenodes' and mtype=='rand'").groupby(['model','mrate','nof_filters','inter_method','method','lags','epoch'])['mse'].std().reset_index(),
-         on=['model','mrate','inter_method','method','nof_filters','lags','epoch']).query("mrate==0.7 and inter_method=='linear'").rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD',mrate':'Missing Rate','inter_method':'Interpolation','nof_filters':'Filters'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method','epoch'])
+         on=['model','mrate','inter_method','method','nof_filters','lags','epoch']).query("mrate==0.7 and inter_method=='linear'").rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','mrate':'Missing Rate','inter_method':'Interpolation','nof_filters':'Filters'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method','epoch'])
 itables.show(FiveVTS_random)
 
 ```
@@ -101,7 +101,7 @@ itables.show(FiveVTS_random)
 
 FiveVTS_block = pd.merge(df.query("dataset=='fivenodes' and mtype=='block'").groupby(['model','mrate','nof_filters','inter_method','method','epoch'])['mse'].mean().reset_index(),
          df.query("dataset=='fivenodes' and mtype=='block'").groupby(['model','mrate','nof_filters','inter_method','method','epoch'])['mse'].std().reset_index(),
-         on=['model','inter_method','method','nof_filters','mrate','epoch']).query("inter_method=='linear'").rename(columns={''model':'Model','mse_x':'Mean','mse_y':'SD','mrate':'Missing Rate','inter_method':'Interpolation','nof_filters':'Filters'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method','epoch'])
+         on=['model','inter_method','method','nof_filters','mrate','epoch']).query("inter_method=='linear'").rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','mrate':'Missing Rate','inter_method':'Interpolation','nof_filters':'Filters'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method','epoch'])
 itables.show(FiveVTS_block)
 
 ```
