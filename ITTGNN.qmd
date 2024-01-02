@@ -116,7 +116,7 @@ itables.show(FiveVTS_block)
 
 Chickenpox_baseline = pd.merge(df.query("dataset=='chickenpox' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters','lags'])['mse'].mean().reset_index(),
          df.query("dataset=='chickenpox' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters','lags'])['mse'].std().reset_index(),
-         on=['model','nof_filters']).rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','nof_filters':'Filters'})
+         on=['model','nof_filters','lags']).rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','nof_filters':'Filters'})
 itables.show(Chickenpox_baseline)
          
 
@@ -127,7 +127,7 @@ itables.show(Chickenpox_baseline)
 
 Chickenpox_random = pd.merge(df.query("dataset=='chickenpox' and mtype=='rand'").groupby(['model','mrate','inter_method','nof_filters','method','lags'])['mse'].mean().reset_index(),
          df.query("dataset=='chickenpox' and mtype=='rand'").groupby(['model','mrate','inter_method','nof_filters','method','lags'])['mse'].std().reset_index(),
-         on=['model','method','inter_method','mrate','nof_filters']).rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','mrate':'Missing Rate','inter_method':'Interpolation','nof_filters':'Filters','lag_x':'lag'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','method','inter_method','mrate','nof_filters','lags']).rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','mrate':'Missing Rate','inter_method':'Interpolation','nof_filters':'Filters','lag_x':'lag'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 itables.show(Chickenpox_random)
 ```
 
@@ -136,7 +136,7 @@ itables.show(Chickenpox_random)
 
 Chickenpox_block = pd.merge(df.query("dataset=='chickenpox' and mtype=='block'").groupby(['model','inter_method','mrate','nof_filters','method','lags'])['mse'].mean().reset_index(),
          df.query("dataset=='chickenpox' and mtype=='block'").groupby(['model','inter_method','mrate','nof_filters','method','lags'])['mse'].std().reset_index(),
-         on=['model','method','inter_method','mrate','nof_filters']).query("inter_method=='linear'").rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','mrate':'Missing Rate','inter_method':'Interpolation','nof_filters':'Filters','lag_x':'lag'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','method','inter_method','mrate','nof_filters','lags']).query("inter_method=='linear'").rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','mrate':'Missing Rate','inter_method':'Interpolation','nof_filters':'Filters','lag_x':'lag'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 itables.show(Chickenpox_block)
 
 
