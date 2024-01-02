@@ -79,7 +79,7 @@ df2 = pd.concat([pedal_wiki_GSO_GConvGRU,pedal_wiki_GSO_GConvLSTM,pedal_wiki_GSO
 
 FiveVTS_baseline = pd.merge(df.query("dataset=='fivenodes' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters','lags','epoch'])['mse'].mean().reset_index(),
          df.query("dataset=='fivenodes' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters','lags','epoch'])['mse'].std().reset_index(),
-         on=['model','nof_filters','lags','epoch']).rename(columns={'model':'Model','nof_filters':'Filters', 'mse_x':'mean','mse_y':'std'})
+         on=['model','nof_filters','lags','epoch']).rename(columns={'model':'Model','nof_filters':'Filters', 'mse_x':'mean','mse_y':'std'}),drop(columns=['epoch'])
 
 itables.show(FiveVTS_baseline)
 
@@ -90,7 +90,7 @@ itables.show(FiveVTS_baseline)
 
 FiveVTS_random = pd.merge(df.query("dataset=='fivenodes' and mtype=='rand'").groupby(['model','mrate','nof_filters','inter_method','method','lags','epoch'])['mse'].mean().reset_index(),
          df.query("dataset=='fivenodes' and mtype=='rand'").groupby(['model','mrate','nof_filters','inter_method','method','lags','epoch'])['mse'].std().reset_index(),
-         on=['model','inter_method','method','nof_filters','mrate','lags','epoch']).rename(columns={'mse_x':'mean','mse_y':'std'}).query("mrate==0.7 and inter_method=='linear'").assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','inter_method','method','nof_filters','mrate','lags','epoch']).rename(columns={'mse_x':'mean','mse_y':'std','mrate'='Missing Rate'}).query("mrate==0.7 and inter_method=='linear'").assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 itables.show(FiveVTS_random)
 
 ```
@@ -203,7 +203,7 @@ itables.show(Wikimath_baseline)
 
 Wikimath_random = pd.merge(df.query("dataset=='wikimath' and mtype=='rand'").groupby(['model','mrate','lags','inter_method','method'])['mse'].mean().reset_index(),
          df.query("dataset=='wikimath' and mtype=='rand'").groupby(['model','mrate','lags','inter_method','method'])['mse'].std().reset_index(),
-         on=['model','mrate','inter_method','lags']).rename(columns={'mse_x':'mean','mse_y':'std'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
+         on=['model','method','mrate','inter_method','lags']).rename(columns={'mse_x':'mean','mse_y':'std'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method'])
 
 itables.show(Wikimath_random)
 ```
