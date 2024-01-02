@@ -99,9 +99,9 @@ itables.show(FiveVTS_random)
 ```{python}
 #| title: Block Missing Data
 
-FiveVTS_block = pd.merge(df.query("dataset=='fivenodes' and mtype=='block'").groupby(['model','mrate','nof_filters','inter_method','method','epoch'])['mse'].mean().reset_index(),
-         df.query("dataset=='fivenodes' and mtype=='block'").groupby(['model','mrate','nof_filters','inter_method','method','epoch'])['mse'].std().reset_index(),
-         on=['model','inter_method','method','nof_filters','mrate','epoch']).query("inter_method=='linear'").rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','mrate':'Missing Rate','inter_method':'Interpolation','nof_filters':'Filters'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method','epoch'])
+FiveVTS_block = pd.merge(df.query("dataset=='fivenodes' and mtype=='block'").groupby(['model','mrate','nof_filters','inter_method','method','lags','epoch'])['mse'].mean().reset_index(),
+         df.query("dataset=='fivenodes' and mtype=='block'").groupby(['model','mrate','nof_filters','inter_method','method','lags','epoch'])['mse'].std().reset_index(),
+         on=['model','inter_method','method','nof_filters','mrate','lags','epoch']).query("inter_method=='linear'").rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','mrate':'Missing Rate','inter_method':'Interpolation','nof_filters':'Filters'}).assign(Method=lambda x: x['method'].map({'STGCN': 'Classic', 'IT-STGCN': 'Proposed','GNAR':'GNAR'})).drop(columns=['method','epoch'])
 itables.show(FiveVTS_block)
 
 ```
