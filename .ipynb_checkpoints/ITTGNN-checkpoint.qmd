@@ -79,7 +79,7 @@ df2 = pd.concat([pedal_wiki_GSO_GConvGRU,pedal_wiki_GSO_GConvLSTM,pedal_wiki_GSO
 
 FiveVTS_baseline = pd.merge(df.query("dataset=='fivenodes' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters','lags','epoch'])['mse'].mean().reset_index(),
          df.query("dataset=='fivenodes' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters','lags','epoch'])['mse'].std().reset_index(),
-         on=['model','nof_filters','lags','epoch']).rename(columns={'model':'Model', 'mse_x':'mean','mse_y':'std','nof_filters':'Filters'}).drop(columns=['epoch'])
+         on=['model','nof_filters','lags','epoch']).rename(columns={'model':'Model', 'mse_x':'Mean','mse_y':'SD','nof_filters':'Filters'}).drop(columns=['epoch'])[['Model','Filters','lags','Mean','SD']]
 
 itables.show(FiveVTS_baseline)
 
@@ -116,7 +116,7 @@ itables.show(FiveVTS_block)
 
 Chickenpox_baseline = pd.merge(df.query("dataset=='chickenpox' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters','lags'])['mse'].mean().reset_index(),
          df.query("dataset=='chickenpox' and mtype!='rand' and mtype!='block'").groupby(['model','nof_filters','lags'])['mse'].std().reset_index(),
-         on=['model','nof_filters','lags']).rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','nof_filters':'Filters'})
+         on=['model','nof_filters','lags']).rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','nof_filters':'Filters'})[['Model','Filters','lags','Mean','SD']]
 itables.show(Chickenpox_baseline)
          
 
@@ -153,7 +153,7 @@ itables.show(Chickenpox_block)
 
 Pedalme_baseline = pd.merge(df.query("dataset=='pedalme' and mtype!='rand' and mtype!='block'").groupby(['model','lags','nof_filters'])['mse'].mean().reset_index(),
          df.query("dataset=='pedalme' and mtype!='rand' and mtype!='block'").groupby(['model','lags','nof_filters'])['mse'].std().reset_index(),
-         on=['model','lags','nof_filters']).rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','nof_filters':'Filters'}).query("lags==4")
+         on=['model','lags','nof_filters']).rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','nof_filters':'Filters'}).query("lags==4")[['Model','Filters','lags','Mean','SD']]
         
 itables.show(Pedalme_baseline)
 
@@ -192,7 +192,7 @@ itables.show(Pedalme_block)
 
 Wikimath_baseline = pd.merge(df.query("dataset=='wikimath' and mrate==0").groupby(['model','lags','nof_filters'])['mse'].mean().reset_index(),
          df.query("dataset=='wikimath' and mrate==0").groupby(['model','lags','nof_filters'])['mse'].std().reset_index(),
-         on=['model','lags','nof_filters']).rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','nof_filters':'Filters'})
+         on=['model','lags','nof_filters']).rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','nof_filters':'Filters'})[['Model','Filters','lags','Mean','SD']]
 
 itables.show(Wikimath_baseline)
 
@@ -232,7 +232,7 @@ itables.show(Wikimath_block)
 
 Windmillsmall_baseline = pd.merge(df.query("dataset=='windmillsmall' and mrate==0").groupby(['model','lags','nof_filters'])['mse'].mean().reset_index(),
          df.query("dataset=='windmillsmall' and mrate==0").groupby(['model','lags','nof_filters'])['mse'].std().reset_index(),
-         on=['model','lags','nof_filters']).rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','nof_filters':'Filters'})
+         on=['model','lags','nof_filters']).rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','nof_filters':'Filters'})[['Model','Filters','lags','Mean','SD']]
 itables.show(Windmillsmall_baseline)
 
 ```
@@ -268,7 +268,7 @@ itables.show(Windmillsmall_block)
 #| title: Baseline Data
 MontevideoBus_baseline = pd.merge(df.query("dataset=='monte' and mrate==0").groupby(['model','lags','nof_filters'])['mse'].mean().reset_index(),
          df.query("dataset=='monte' and mrate==0").groupby(['model','lags','nof_filters'])['mse'].std().reset_index(),
-         on=['model','lags','nof_filters']).rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','nof_filters':'Filters'})
+         on=['model','lags','nof_filters']).rename(columns={'model':'Model','mse_x':'Mean','mse_y':'SD','nof_filters':'Filters'})[['Model','Filters','lags','Mean','SD']]
 
 itables.show(MontevideoBus_baseline)         
 ```
