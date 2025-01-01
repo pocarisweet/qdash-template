@@ -1,1 +1,0 @@
-[ITTGNN_dashboard](https://seoyeonc.github.io/ITTGNN_dashboard/)
