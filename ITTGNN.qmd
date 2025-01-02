@@ -1,6 +1,6 @@
 ---
 title: "Analysis Result of ITTGNN"
-author: "SEOYEON CHOI"
+author: "JEONGHYEOK KANG"
 format: 
     dashboard:
      theme: default
